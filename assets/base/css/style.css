@@ -33,7 +33,7 @@ body {
 }
 
 /*Styles*/
-body > section:not(:first-of-type), footer {
+body > section:not(:first-of-type, :nth-of-type(2)), footer {
 	display: none;
 }
 
@@ -55,6 +55,9 @@ body > section:not(:first-of-type), footer {
 .bg-contain {background-size: contain;background-repeat: no-repeat;}
 .first-section-eye {background-image: url('../img/first-section/img-eyes.png');height: 100px;}
 .mt-5rem {margin-top: 5rem;}
+.border-bottom-transparent {border-bottom: 1px solid transparent;}
+#header.scrolled {background-color: rgba(24, 24, 24, .2);backdrop-filter: blur(10px);border-bottom-color: rgba(256,256,256,.1)}
+#header.scrolled > main {padding: 1rem !important;}
 
 /*Hover, Active, ...*/
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}

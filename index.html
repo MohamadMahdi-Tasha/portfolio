@@ -28,8 +28,8 @@
 	<!--First Section-->
 	<section class="dark-bg-with-lines bg-cover min-vh-100 d-flex align-items-center justify-content-center">
 		<!--Header Section (Top Side)-->
-		<header class='w-100 d-flex align-items-center justify-content-center fixed-top'>
-			<main class='w-1500px d-inline-flex align-items-center justify-content-between p-4'>
+		<header class='w-100 d-flex align-items-center justify-content-center fixed-top transition border-bottom-transparent' id='header'>
+			<main class='w-1500px d-inline-flex align-items-center justify-content-between p-4 transition'>
 				<img src="assets/base/img/img-logo-png.png" width='50px'>
 				<ul class='d-inline-flex align-items-center justify-content-between list-unstyled w-50'>
 					<li class='mr-1'><a class='my-text-light' href="#">Portfolio</a></li>
@@ -352,4 +352,8 @@
 <noscript>Please Turn On Javascript On Your Browser.</noscript>
 <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
+<script>
+	const header = document.getElementById('header');
+	window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+</script>
 </html>
