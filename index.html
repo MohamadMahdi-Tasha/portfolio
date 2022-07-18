@@ -57,14 +57,9 @@
 	<section>
 		<main>
 			<!--Top Side Slider-->
-			<div class="swiper">
+			<div class="defualt-swiper">
 		 		<!-- Additional required wrapper -->
-				<div class="swiper-wrapper">
-					<!-- Slides -->
-					<a href="#" class="swiper-slide">Slide 1</a>
-					<a href="#" class="swiper-slide">Slide 2</a>
-					<a href="#" class="swiper-slide">Slide 3</a>
-				</div>
+				<div class="swiper-wrapper" id='second-section-swiper-wrapper'></div>
 			</div>
 			<!--Bottom Side O Slider-->
 			<div>
@@ -347,13 +342,48 @@
 			<h6>&copy; 2022 Copyright By <a href="https://dribbble.com/shots/18051436-Fisma-Creative-Agency-Landing-Page">Fisma</a></h6>
 		</div>
 	</footer>
+	<ul id='kib'>
+
+	<ul>
 </body>
 <!--Js Linking-->
 <noscript>Please Turn On Javascript On Your Browser.</noscript>
 <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
 <script>
+	//Variables
 	const header = document.getElementById('header');
+	const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4,})
+	const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
+
+	//A Function That Loops Through Numbers And Characters And Returns Random Hex Color
+	function getRandomColor() {
+		const letters = '0123456789ABCDEF';
+		let color = '#';
+
+		for (var i = 0; i < 6; i++) {color += letters[Math.floor(Math.random() * 16)];}
+		return color;
+	}
+
+	//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
 	window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+
+	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos')
+		.then(result => result.json())
+		.then(result => {
+			result.forEach(item => {
+				const swiperSlide = document.createElement('a');
+				const titleOfSlide = document.createElement('h3');
+				
+				swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white';
+				swiperSlide.style.backgroundColor = getRandomColor();
+				swiperSlide.href = `https://github.com/MohamadMahdi-Tasha/${item.name}`;
+				swiperSlide.target = '_blank';
+				titleOfSlide.textContent = item.name;
+
+				swiperSlide.appendChild(titleOfSlide);
+				secondSectionsSwiperWrapper.appendChild(swiperSlide);
+			})
+		})
 </script>
 </html>

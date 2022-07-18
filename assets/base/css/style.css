@@ -30,6 +30,7 @@ body {
 	font-family: 'Work Sans', sans-serif !important;
 	font-size: 15px;
 	font-weight: 500;
+	overflow-x: hidden;
 }
 
 /*Styles*/
@@ -58,6 +59,7 @@ body > section:not(:first-of-type, :nth-of-type(2)), footer {
 .border-bottom-transparent {border-bottom: 1px solid transparent;}
 #header.scrolled {background-color: rgba(24, 24, 24, .2);backdrop-filter: blur(10px);border-bottom-color: rgba(256,256,256,.1)}
 #header.scrolled > main {padding: 1rem !important;}
+.swiper-wrapper > .swiper-slide {height: 300px !important;background-color: red;}
 
 /*Hover, Active, ...*/
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
