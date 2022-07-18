@@ -1,5 +1,8 @@
 /*Made With Love By Mohamad Mahdi Tasha In Neovim*/
 
+/*Linked Fonts*/
+@import '../fonts/font.css';
+
 /*Css Reset*/
 img {pointer-events: none;}
 a {text-decoration: none;}
@@ -13,4 +16,14 @@ ul, ol, li {margin: 0 !important;}
 	outline: none;
 }
 
+body {
+	font-family: 'Work Sans', sans-serif !important;
+	font-size: 15px;
+	font-weight: 500;
+}
+
 /*Styles*/
+.my-fw-regular {font-weight: 400;}
+.my-fw-medium {font-weight: 500;}
+.my-fw-bold {font-weight: 700;}
+.my-fw-extra-bold {font-weight: 800;}
