@@ -59,7 +59,9 @@ body > section:not(:first-of-type, :nth-of-type(2)), footer {
 .border-bottom-transparent {border-bottom: 1px solid transparent;}
 #header.scrolled {background-color: rgba(24, 24, 24, .2);backdrop-filter: blur(10px);border-bottom-color: rgba(256,256,256,.1)}
 #header.scrolled > main {padding: 1rem !important;}
-.swiper-wrapper > .swiper-slide {height: 300px !important;background-color: red;}
+.swiper-wrapper > .swiper-slide {height: 300px !important;}
 
 /*Hover, Active, ...*/
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
+.swiper-wrapper > .swiper-slide:hover {transform: scale(1.25);z-index: 1000;}
+

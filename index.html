@@ -353,7 +353,7 @@
 <script>
 	//Variables
 	const header = document.getElementById('header');
-	const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4,})
+	const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4})
 	const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
 
 	//A Function That Loops Through Numbers And Characters And Returns Random Hex Color
@@ -375,7 +375,7 @@
 				const swiperSlide = document.createElement('a');
 				const titleOfSlide = document.createElement('h3');
 				
-				swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white';
+				swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white transition';
 				swiperSlide.style.backgroundColor = getRandomColor();
 				swiperSlide.href = `https://github.com/MohamadMahdi-Tasha/${item.name}`;
 				swiperSlide.target = '_blank';
