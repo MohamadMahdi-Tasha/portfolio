@@ -63,5 +63,9 @@ body > section:not(:first-of-type, :nth-of-type(2)), footer {
 
 /*Hover, Active, ...*/
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
-.swiper-wrapper > .swiper-slide:hover {transform: scale(1.25);z-index: 1000;}
+.swiper-wrapper > .swiper-slide:hover {
+	transform: scale(1.25);
+	z-index: 1000;
+	box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
 
