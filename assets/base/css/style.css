@@ -53,7 +53,8 @@ body > section:not(:first-of-type), footer {
 .fs-75 {font-size: 75px;}
 .my-text-light {color: var(--light) !important;}
 .bg-contain {background-size: contain;background-repeat: no-repeat;}
-.first-section-eye {	background-image: url('../img/first-section/img-eyes.png');height: 100px;}
+.first-section-eye {background-image: url('../img/first-section/img-eyes.png');height: 100px;}
+.mt-5rem {margin-top: 5rem;}
 
 /*Hover, Active, ...*/
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
