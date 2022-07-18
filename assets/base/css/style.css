@@ -1,1 +1,16 @@
 /*Made With Love By Mohamad Mahdi Tasha In Neovim*/
+
+/*Css Reset*/
+img {pointer-events: none;}
+a {text-decoration: none;}
+button {cursor: pointer;}
+ul, ol, li {margin: 0 !important;}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+/*Styles*/
