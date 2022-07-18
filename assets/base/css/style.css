@@ -8,13 +8,14 @@
 	--green: #55E6A5;
 	--yellow: #FAB228;
 	--orange: #EA552A;
-	--black: #181818;
+	--dark: #181818;
 	--light: #F3F4F6;
+	--darker-green: #4acf93;
 }
 
 /*Css Reset*/
 img {pointer-events: none;}
-a {text-decoration: none;}
+a {text-decoration: none !important;}
 button {cursor: pointer;}
 ul, ol, li {margin: 0 !important;}
 
@@ -32,7 +33,24 @@ body {
 }
 
 /*Styles*/
+body > section:not(:first-of-type), footer {
+	display: none;
+}
+
 .my-fw-regular {font-weight: 400;}
 .my-fw-medium {font-weight: 500;}
 .my-fw-bold {font-weight: 700;}
 .my-fw-extra-bold {font-weight: 800;}
+.dark-bg-with-lines {background-image: url("../img/img-dark-lines-bg.jpg");}
+.bg-cover {background-size: cover;}
+.w-1500px {width: 1200px;}
+.mr-1 {margin-right: 1rem;}
+.ml-1 {margin-left: 1rem;}
+.bg-green {background-color: var(--green);}
+.squar-size {width: 50px;}
+.aspect-ratio {aspect-ratio: 1/1;}
+.transition {transition: .3s;}
+.fs-75 {font-size: 75px;}
+
+/*Hover, Active, ...*/
+.hover-bg-darker-green:hover {background-color: var(--darker-green);}
