@@ -51,6 +51,9 @@ body > section:not(:first-of-type), footer {
 .aspect-ratio {aspect-ratio: 1/1;}
 .transition {transition: .3s;}
 .fs-75 {font-size: 75px;}
+.my-text-light {color: var(--light) !important;}
+.bg-contain {background-size: contain;background-repeat: no-repeat;}
+.first-section-eye {	background-image: url('../img/first-section/img-eyes.png');height: 100px;}
 
 /*Hover, Active, ...*/
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
