@@ -3,6 +3,15 @@
 /*Linked Fonts*/
 @import '../fonts/font.css';
 
+/*Variables*/
+:root {
+	--green: #55E6A5;
+	--yellow: #FAB228;
+	--orange: #EA552A;
+	--black: #181818;
+	--light: #F3F4F6;
+}
+
 /*Css Reset*/
 img {pointer-events: none;}
 a {text-decoration: none;}
