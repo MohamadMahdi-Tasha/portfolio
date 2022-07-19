@@ -100,7 +100,7 @@
 						</div>
 					</div>
 					<!--Bottom Companys logos-->
-					<div class='w-100 d-inline-flex align-items-center justify-content-between'>
+					<div class='w-100 d-inline-flex align-items-center justify-content-between mb-5rem'>
 						<a href="#"><img width='100px' src="assets/base/img/second-section/img-allianz.png"></a>
 						<a href="#"><img width='100px' src="assets/base/img/second-section/img-facebook.png"></a>			
 						<a href="#"><img width='100px' src="assets/base/img/second-section/img-google.png"></a>
@@ -112,94 +112,22 @@
 		</main>
 	</section>
 	<!--third section-->
-	<section>
-		<img sec="assets/img/third-section/img-top-side.png">
-		<main>
+	<section class='w-100 d-flex justify-content-center align-items-center bg-white third-section position-relative'>
+		<main class='w-1500px p-4'>
+			<div class='third-sections-top-side-img d-flex w-100 justify-content-center align-items-center'>
+				<img src="assets/base/img/third-section/img-top-side.png" width='100px'>
+			</div>
 			<!--Top Side-->
-			<h1>Our Recent Work<h1>
-			<p>
-				We love our residental design and build projects - big and small!From full builds.
+			<h1 class='text-center my-text-dark my-fw-bold fs-75 mb-3'>Our Recent Work<h1>
+			<p class='fs-6 text-center mb-5'>
+				We love our residental design and build projects - big and small!From full builds. <br>
 				major renovations or new lease of life to individual space.
 			</p>
-			<a href="#"><button>View All Projects<button></a>
+			<div class='d-flex align-items-center justify-content-center mb-5'>
+				<a href="#"><button class='rounded-pill bg-green border-dark text-dark transition three-d-btn p-2 fs-6'>View All Projects<button></a>
+			</div>
 			<!-- bottom Side-->
-			<ul>
-				<li>
-					<!--Left Side-->
-					<a href="#">
-						<i class="bi bi-arrow-up-right-circle"></i>
-						See Project
-					</a>
-					<!--right side-->
-					<div>
-						<h1>
-							Nice Block
-							Apple & Mango
-						</h1>
-						<p>
-							Nice Block Apple & Mango about ice block that has theme 
-							cute branding and fun coloring. The client went us to
-							create more unique and creative design then before.
-						</p>
-						<!--tags-->
-						<ul>
-							<li><a href="#"><button>BRANDING</button></a></li>
-							<li><a href="#"><button>LOGO DESIGN</button></a></li>
-							<li><a href="#"><button>MOCKUP</button></a></li>
-						</div>
-					</div>
-				</li>
-				<li>
-					<!--Left Side-->
-					<div>
-						<h1>
-							Nice Block
-							Apple & Mango
-						</h1>
-						<p>
-							Nice Block Apple & Mango about ice block that has theme 
-							cute branding and fun coloring. The client went us to
-							create more unique and creative design then before.
-						</p>
-						<!--tags-->
-						<ul>
-							<li><a href="#"><button>BRANDING</button></a></li>
-							<li><a href="#"><button>LOGO DESIGN</button></a></li>
-							<li><a href="#"><button>MOCKUP</button></a></li>
-						</div>
-					</div>
-					<!--right side-->
-					<a href="#">
-						<i class="bi bi-arrow-up-right-circle"></i>
-						See Project
-					</a>
-				</li>
-				<li>
-					<!--Left Side-->
-					<a href="#">
-						<i class="bi bi-arrow-up-right-circle"></i>
-						See Project
-					</a>
-					<!--right side-->
-					<div>
-						<h1>
-							Nice Block
-							Apple & Mango
-						</h1>
-						<p>
-							Nice Block Apple & Mango about ice block that has theme 
-							cute branding and fun coloring. The client went us to
-							create more unique and creative design then before.
-						</p>
-						<!--tags-->
-						<ul>
-							<li><a href="#"><button>BRANDING</button></a></li>
-							<li><a href="#"><button>LOGO DESIGN</button></a></li>
-							<li><a href="#"><button>MOCKUP</button></a></li>
-						</div>
-					</div>
-				</li>
-			</ul>
+			<ul class='list-unstyled' id='recent-works'></ul>
 		</main>
 	</section>
 	<section>
@@ -358,6 +286,7 @@
 	const header = document.getElementById('header');
 	const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4, mousewheel: true,})
 	const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
+	const recentWorks = document.getElementById('recent-works');
 
 	//A Function That Loops Through Numbers And Characters And Returns Random Hex Color
 	function getRandomColor() {
@@ -371,13 +300,13 @@
 	//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
 	window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
 
-	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos')
+	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
 		.then(result => result.json())
 		.then(result => {
 			result.forEach(item => {
 				const swiperSlide = document.createElement('a');
 				const titleOfSlide = document.createElement('h3');
-				
+
 				swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white transition';
 				swiperSlide.style.backgroundColor = getRandomColor();
 				swiperSlide.href = `https://github.com/MohamadMahdi-Tasha/${item.name}`;
@@ -387,6 +316,64 @@
 				swiperSlide.appendChild(titleOfSlide);
 				secondSectionsSwiperWrapper.appendChild(swiperSlide);
 			})
+		})
+	
+	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
+		.then(result => result.json())
+		.then(result => {
+			const firstThreeRepos = result.slice(0,5);
+			firstThreeRepos.forEach(repo => {
+				const li = document.createElement('li');
+				const leftSide = document.createElement('a');
+				const leftSideInitSpan = document.createElement('span');
+				const rightSide = document.createElement('div');
+				const title = document.createElement('h1');
+				const paragraph = document.createElement('p');	
+				const tagsHolder = document.createElement('ul');
+				const leftSideIcon = document.createElement('i');
+				const leftSideSpanInSpan = document.createElement('span');
+
+				li.className = 'w-100 d-inline-flex align-items-center gap-5 recent-repo';
+				leftSide.className = 'recent-works-left-side w-50 d-flex align-items-end fs-4 p-4 transition';
+				leftSide.style.backgroundColor = getRandomColor();
+				leftSideInitSpan.className = 'opacity-0 transition text-white'
+				rightSide.className = 'w-50';
+				title.className = 'text-dark my-fw-extra-bold mb-5';
+				paragraph.className = 'fs-5 text-dark my-fw-regular';
+				tagsHolder.className = 'list-unstyled d-flex flex-wrap w-100 gap-2';
+				leftSideIcon.className = 'bi bi-arrow-up-right-circle mr-1';
+				leftSideSpanInSpan.textContent = 'See Projects';
+
+				title.textContent = repo.name;
+				paragraph.textContent = repo.description;
+				leftSide.href = `https://www.github.com/MohamadMahdi-Tasha/${repo.name}`;
+
+				repo.topics.forEach(topic => {
+					const tagLink = document.createElement('a');
+					const tag = document.createElement('li');
+					const tagButton = document.createElement('button');
+
+					tagLink.href = `https://www.github.com/topics/${topic}`;
+					tagLink.target = '_blank';
+					tagButton.className = 'p-2 fs-6 rounded-pill border-dark bg-transparent text-dark hover-bg-dark hover-text-light transition';
+					tagButton.textContent = topic;
+					tagLink.appendChild(tagButton);
+					tag.appendChild(tagLink);
+					tagsHolder.appendChild(tag);
+				})
+
+				li.appendChild(leftSide);
+				leftSide.appendChild(leftSideInitSpan);
+				li.appendChild(rightSide);
+				rightSide.appendChild(title);
+				rightSide.appendChild(paragraph);
+				rightSide.appendChild(tagsHolder);
+				leftSideInitSpan.appendChild(leftSideIcon);
+				leftSideInitSpan.appendChild(leftSideSpanInSpan);
+				recentWorks.appendChild(li);
+			})
+
+			firstThreeRepos.forEach(item => console.log(item))
 		})
 </script>
 </html>

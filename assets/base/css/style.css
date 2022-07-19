@@ -34,7 +34,7 @@ body {
 }
 
 /*Styles*/
-body > section:not(:first-of-type, :nth-of-type(2)), footer {
+body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3)), footer {
 	display: none;
 }
 
@@ -62,11 +62,32 @@ body > section:not(:first-of-type, :nth-of-type(2)), footer {
 .swiper-wrapper > .swiper-slide {height: 300px !important;}
 .text-green {color: var(--green);}
 .border-light {border: 1px solid var(--light);}
+.mb-5rem {margin-bottom: 5rem;}
+.third-sections-top-side-img {transform: translateY(-95px)}
+.my-text-dark {color: var(--dark)}
+.border-dark {border: 1px solid var(--dark);}
+.three-d-btn {box-shadow: 5px 5px 0 rgba(0,0,0,1);}
+.recent-works-left-side{height: 400px;}
+.recent-repo:not(:last-of-type) {margin-bottom: 3rem !important;}
+.recent-repo:nth-of-type(even) {direction: rtl;}
+.third-section:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	background-image: url('../img/third-section/img-wave.svg');
+	width: 100%;
+	height: 50px;
+	transform: translateY(-100%);
+}
 
 /*Hover, Active, ...*/
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
 .hover-bg-light:hover {background-color: var(--light) !important;}
 .hover-text-dark:hover {color: var(--dark) !important;}
+.three-d-btn:hover, .recent-works-left-side:hover {box-shadow: 10px 10px 0 rgba(0,0,0,1);}
+.recent-works-left-side:hover > span {opacity: 1 !important;}
+.hover-bg-dark:hover {background-color: var(--dark) !important;}
+.hover-text-light:hover {color: var(--light) !important}
 .swiper-wrapper > .swiper-slide:hover {
 	transform: scale(1.25);
 	z-index: 1000;
