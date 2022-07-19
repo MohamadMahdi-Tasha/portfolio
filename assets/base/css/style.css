@@ -69,7 +69,8 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3)), footer {
 .three-d-btn {box-shadow: 5px 5px 0 rgba(0,0,0,1);}
 .recent-works-left-side{height: 400px;}
 .recent-repo:not(:last-of-type) {margin-bottom: 3rem !important;}
-.recent-repo:nth-of-type(even) {direction: rtl;}
+.recent-repo:nth-of-type(even), 
+#recent-works > .skelton-parent-of-third-section:nth-of-type(even) {direction: rtl !important;}
 .third-section:before {
 	content: '';
 	position: absolute;
