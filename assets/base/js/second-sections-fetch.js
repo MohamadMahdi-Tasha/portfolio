@@ -1,3 +1,4 @@
+// Made With Love By Mohamad Mahdi Tasha In Neovim
 //A Function That Loops Through Numbers And Characters And Returns Random Hex Color
 function getRandomColor() {
 	const letters = '0123456789ABCDEF';

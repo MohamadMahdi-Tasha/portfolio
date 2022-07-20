@@ -1,3 +1,4 @@
+// Made With Love By Mohamad Mahdi Tasha In Neovim
 const header = document.getElementById('header');
 const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4, mousewheel: true,})
 const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
