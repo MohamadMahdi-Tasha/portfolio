@@ -35,7 +35,7 @@ body {
 }
 
 /*Styles*/
-body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-type(4)), footer {
+body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5)), footer {
 	display: none;
 }
 
@@ -79,6 +79,8 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .list-with-ticks.ticks-black > li::before{color: var(--dark) !important;}
 .list-with-ticks.ticks-green > li::before{color: var(--green) !important;}
 .bg-orange {background-color: var(--orange);}
+.fifth-section {background-image: url('../img/fifth-section/img-bg.png');background-color: var(--green)}
+
 .new-feature {
 	border-top-left-radius: 1rem;
 	border-top-right-radius: 1rem;
@@ -86,7 +88,7 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 
 }
 
-.third-section:after {
+.third-section::after {
 	content: '';
 	position: absolute;
 	top: 100%;
@@ -96,7 +98,7 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 	transform: rotate(180deg);
 }
 
-.third-section:before {
+.third-section::before {
 	content: '';
 	position: absolute;
 	top: 0;
