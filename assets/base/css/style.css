@@ -2,6 +2,7 @@
 
 /*Linked Fonts*/
 @import '../fonts/font.css';
+@import '../../plugins/bootstrap-icons/bootstrap-icons.css';
 
 /*Variables*/
 :root {
@@ -74,8 +75,15 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .recent-repo:nth-of-type(even) .mr-1 {margin-left: 1rem !important;} 
 .border-transparent {border: 1px solid transparent;}
 .list-with-ticks > li {display: inline-flex;}
-.list-with-ticks > li:before{
-	content: '\F26E';
+.list-with-ticks > li::before{content: '\F26E';margin-right: 1rem;}
+.list-with-ticks.ticks-black > li::before{color: var(--dark) !important;}
+.list-with-ticks.ticks-green > li::before{color: var(--green) !important;}
+.bg-orange {background-color: var(--orange);}
+.new-feature {
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+
 }
 
 .third-section:after {
