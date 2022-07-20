@@ -34,7 +34,7 @@ body {
 }
 
 /*Styles*/
-body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3)), footer {
+body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-type(4)), footer {
 	display: none;
 }
 
@@ -72,6 +72,23 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3)), footer {
 .recent-repo:nth-of-type(even), 
 #recent-works > .skelton-parent-of-third-section:nth-of-type(even) {direction: rtl !important;}
 .recent-repo:nth-of-type(even) .mr-1 {margin-left: 1rem !important;} 
+.border-transparent {border: 1px solid transparent;}
+.list-with-ticks > li {display: inline-flex;}
+.list-with-ticks > li:before{
+	content: '\F26E';
+	margin-right: 1rem;
+}
+
+.third-section:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	background-image: url('../img/third-section/img-wave.svg');
+	width: 100%;
+	height: 50px;
+	transform: rotate(180deg);
+}
+
 .third-section:before {
 	content: '';
 	position: absolute;
@@ -86,10 +103,11 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3)), footer {
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
 .hover-bg-light:hover {background-color: var(--light) !important;}
 .hover-text-dark:hover {color: var(--dark) !important;}
-.three-d-btn:hover, .recent-works-left-side:hover {box-shadow: 10px 10px 0 rgba(0,0,0,1);}
+.three-d-btn:hover, .recent-works-left-side:hover, .hover-3d-shadow:hover {box-shadow: 10px 10px 0 rgba(0,0,0,1);}
 .recent-works-left-side:hover > span {opacity: 1 !important;}
 .hover-bg-dark:hover {background-color: var(--dark) !important;}
 .hover-text-light:hover {color: var(--light) !important}
+.hover-border-dark:hover {border-color: var(--dark)}
 .swiper-wrapper > .swiper-slide:hover {
 	transform: scale(1.25);
 	z-index: 1000;

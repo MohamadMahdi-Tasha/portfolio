@@ -178,37 +178,38 @@
 			</ul>
 		</main>
 	</section>
-	<section>
-		<main>
-			<h1>Choose your package</h1>
-			<h6>Change the package that suits you :D</h6>
+	<!--Fourth Section-->
+	<section class='bg-green w-100 d-flex align-items-center justify-content-center'>
+		<main class='w-1500px p-4 pt-5'>
+			<h1 class='fs-75 my-fw-extra-bold text-center mt-5 mb-3 text-dark'>Choose your package</h1>
+			<h5 class='text-center text-dark mb-5'>Change the package that suits you :D</h6>
 			<!--Bottom side packages-->
-			<ul>
-				<li>
-					<a href="#">
+			<ul class='row list-unstyled gap-5'>
+				<li class='col rounded-4 bg-white border-transparent hover-border-dark hover-text-light transition text-dark p-4 transition hover-3d-shadow package'>
+					<a href="#" class='text-dark'>
 						<!--top side-->
-						<div>
-							<i class="bi bi-circle-fill"></i>
+						<div class='d-inline-flex w-100 mb-2'>
+							<i class="bi bi-circle-fill mr-1"></i>
 							<h5>Personal</h5>
 						</div>
-						<h6>For 1x project</h6>
+						<h6 class='mb-5'>For 1x project</h6>
 						<h1>
 							<sup>$</sup>
-							10
+							<span class='my-fw-extra-bold fs-1'>10</span>
 							<sub>/Mo</sub>
 						</h1>
 						<hr>
 						<!--Features-->
-						<ul>
+						<ul class='mb-5 list-unstyled list-with-ticks ticks-black'>
 							<li>10 Asset Delivery</li>
 							<li>10 Capacity Bandwith</li>			
 							<li>Support System Everywhere</li> 			
 							<li>Access Social Media</li>
 						</ul>
-						<button>Purchase Now</button>
+						<button class='mt-5 w-100 bg-white border-dark text-dark hover-bg-dark hover-text-light p-2 rounded-pill transition'>Purchase Now</button>
 					</a>
 				</li>
-				<li>
+				<li class='col'>
 					<a href="#">
 						<!--top side-->
 						<div>
@@ -233,7 +234,7 @@
 						<button>Purchase Now</button>
 					</a>
 				</li>
-				<li>
+				<li class='col'>
 					<a href="#">
 						<!--top side-->
 						<div>
@@ -321,109 +322,109 @@
 			<h6>&copy; 2022 Copyright By <a href="https://dribbble.com/shots/18051436-Fisma-Creative-Agency-Landing-Page">Fisma</a></h6>
 		</div>
 	</footer>
-</body>
-<!--Js Linking-->
-<noscript>Please Turn On Javascript On Your Browser.</noscript>
-<script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
-<script>
-	//Variables
-	const header = document.getElementById('header');
-	const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4, mousewheel: true,})
-	const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
-	const recentWorks = document.getElementById('recent-works');
-	const skeltonParentOfThirdSection = document.querySelectorAll('.skelton-parent-of-third-section');
-	const skeltonOfSecondSection = document.querySelectorAll('.skelton-of-second-section');
+	<!--Js Linking-->
+	<noscript>Please Turn On Javascript On Your Browser.</noscript>
+	<script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
+	<script>
+		//Variables
+		const header = document.getElementById('header');
+		const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4, mousewheel: true,})
+		const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
+		const recentWorks = document.getElementById('recent-works');
+		const skeltonParentOfThirdSection = document.querySelectorAll('.skelton-parent-of-third-section');
+		const skeltonOfSecondSection = document.querySelectorAll('.skelton-of-second-section');
 
-	//A Function That Loops Through Numbers And Characters And Returns Random Hex Color
-	function getRandomColor() {
-		const letters = '0123456789ABCDEF';
-		let color = '#';
+		//A Function That Loops Through Numbers And Characters And Returns Random Hex Color
+		function getRandomColor() {
+			const letters = '0123456789ABCDEF';
+			let color = '#';
 
-		for (var i = 0; i < 6; i++) {color += letters[Math.floor(Math.random() * 16)];}
-		return color;
-	}
-
-	//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
-	window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-
-	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
-		.then(result => result.json())
-		.then(result => {
-			skeltonOfSecondSection.forEach(item => item.remove());
-			result.forEach(item => {
-				const swiperSlide = document.createElement('a');
-				const titleOfSlide = document.createElement('h3');
-
-				swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white transition';
-				swiperSlide.style.backgroundColor = getRandomColor();
-				swiperSlide.href = `https://github.com/MohamadMahdi-Tasha/${item.name}`;
-				swiperSlide.target = '_blank';
-				titleOfSlide.textContent = item.name;
-
-				swiperSlide.appendChild(titleOfSlide);
-				secondSectionsSwiperWrapper.appendChild(swiperSlide);
-			})
-		})
+			for (var i = 0; i < 6; i++) {color += letters[Math.floor(Math.random() * 16)];}
+			return color;
+		}-
 	
-	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
-		.then(result => result.json())
-		.then(result => {
-			const firstThreeRepos = result.slice(0,5);
-			skeltonParentOfThirdSection.forEach(skelton => skelton.remove());
+		//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
+		window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
 
-			firstThreeRepos.forEach(repo => {
-				const li = document.createElement('li');
-				const leftSide = document.createElement('a');
-				const leftSideInitSpan = document.createElement('span');
-				const rightSide = document.createElement('div');
-				const title = document.createElement('h1');
-				const paragraph = document.createElement('p');	
-				const tagsHolder = document.createElement('ul');
-				const leftSideIcon = document.createElement('i');
-				const leftSideSpanInSpan = document.createElement('span');
+		fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
+			.then(result => result.json())
+			.then(result => {
+				skeltonOfSecondSection.forEach(item => item.remove());
+					result.forEach(item => {
+					const swiperSlide = document.createElement('a');
+					const titleOfSlide = document.createElement('h3');
 
-				li.className = 'w-100 d-inline-flex align-items-center gap-5 recent-repo';
-				leftSide.className = 'recent-works-left-side w-50 d-flex align-items-end fs-4 p-4 transition';
-				leftSide.style.backgroundColor = getRandomColor();
-				leftSideInitSpan.className = 'opacity-0 transition text-white'
-				rightSide.className = 'w-50';
-				title.className = 'text-dark my-fw-extra-bold mb-5';
-				paragraph.className = 'fs-5 text-dark my-fw-regular';
-				tagsHolder.className = 'list-unstyled d-flex flex-wrap w-100 gap-2';
-				leftSideIcon.className = 'bi bi-arrow-up-right-circle mr-1';
-				leftSideSpanInSpan.textContent = 'See Projects';
+					swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white transition';
+					swiperSlide.style.backgroundColor = getRandomColor();
+					swiperSlide.href = `https://github.com/MohamadMahdi-Tasha/${item.name}`;
+					swiperSlide.target = '_blank';
+					titleOfSlide.textContent = item.name;
 
-				title.textContent = repo.name;
-				paragraph.textContent = repo.description;
-				leftSide.href = `https://www.github.com/MohamadMahdi-Tasha/${repo.name}`;
-
-				repo.topics.forEach(topic => {
-					const tagLink = document.createElement('a');
-					const tag = document.createElement('li');
-					const tagButton = document.createElement('button');
-
-					tagLink.href = `https://www.github.com/topics/${topic}`;
-					tagLink.target = '_blank';
-					tagButton.className = 'p-2 fs-6 rounded-pill border-dark bg-transparent text-dark hover-bg-dark hover-text-light transition';
-					tagButton.textContent = topic;
-					tagLink.appendChild(tagButton);
-					tag.appendChild(tagLink);
-					tagsHolder.appendChild(tag);
+					swiperSlide.appendChild(titleOfSlide);
+					secondSectionsSwiperWrapper.appendChild(swiperSlide);
 				})
+			})
+	
+		fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
+			.then(result => result.json())
+			.then(result => {
+				const firstThreeRepos = result.slice(0,5);
+				skeltonParentOfThirdSection.forEach(skelton => skelton.remove());
 
-				li.appendChild(leftSide);
-				leftSide.appendChild(leftSideInitSpan);
-				li.appendChild(rightSide);
-				rightSide.appendChild(title);
-				rightSide.appendChild(paragraph);
-				rightSide.appendChild(tagsHolder);
-				leftSideInitSpan.appendChild(leftSideIcon);
-				leftSideInitSpan.appendChild(leftSideSpanInSpan);
-				recentWorks.appendChild(li);
+				firstThreeRepos.forEach(repo => {
+					const li = document.createElement('li');
+					const leftSide = document.createElement('a');
+					const leftSideInitSpan = document.createElement('span');
+					const rightSide = document.createElement('div');
+					const title = document.createElement('h1');
+					const paragraph = document.createElement('p');	
+					const tagsHolder = document.createElement('ul');
+					const leftSideIcon = document.createElement('i');
+					const leftSideSpanInSpan = document.createElement('span');
+
+					li.className = 'w-100 d-inline-flex align-items-center gap-5 recent-repo';
+					leftSide.className = 'recent-works-left-side w-50 d-flex align-items-end fs-4 p-4 transition';
+					leftSide.style.backgroundColor = getRandomColor();
+					leftSideInitSpan.className = 'opacity-0 transition text-white'
+					rightSide.className = 'w-50';
+					title.className = 'text-dark my-fw-extra-bold mb-5';
+					paragraph.className = 'fs-5 text-dark my-fw-regular';
+					tagsHolder.className = 'list-unstyled d-flex flex-wrap w-100 gap-2';
+					leftSideIcon.className = 'bi bi-arrow-up-right-circle mr-1';
+					leftSideSpanInSpan.textContent = 'See Projects';
+	
+					title.textContent = repo.name;
+					paragraph.textContent = repo.description;
+					leftSide.href = `https://www.github.com/MohamadMahdi-Tasha/${repo.name}`;
+
+					repo.topics.forEach(topic => {
+						const tagLink = document.createElement('a');
+						const tag = document.createElement('li');
+						const tagButton = document.createElement('button');
+
+						tagLink.href = `https://www.github.com/topics/${topic}`;
+						tagLink.target = '_blank';
+						tagButton.className = 'p-2 fs-6 rounded-pill border-dark bg-transparent text-dark hover-bg-dark hover-text-light transition';
+						tagButton.textContent = topic;
+						tagLink.appendChild(tagButton);
+						tag.appendChild(tagLink);
+						tagsHolder.appendChild(tag);
+					})
+
+					li.appendChild(leftSide);
+					leftSide.appendChild(leftSideInitSpan);
+					li.appendChild(rightSide);
+					rightSide.appendChild(title);
+					rightSide.appendChild(paragraph);
+					rightSide.appendChild(tagsHolder);
+					leftSideInitSpan.appendChild(leftSideIcon);
+					leftSideInitSpan.appendChild(leftSideSpanInSpan);
+					recentWorks.appendChild(li);
 			})
 
-			firstThreeRepos.forEach(item => console.log(item))
-		})
+				firstThreeRepos.forEach(item => console.log(item))
+			})
 </script>
+</body>
 </html>
