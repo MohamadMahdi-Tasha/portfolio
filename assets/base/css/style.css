@@ -80,6 +80,7 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .list-with-ticks.ticks-green > li::before{color: var(--green) !important;}
 .bg-orange {background-color: var(--orange);}
 .fifth-section {background-image: url('../img/fifth-section/img-bg.png');background-color: var(--green)}
+.w-50px {width: 50px !important;}
 
 .new-feature {
 	border-top-left-radius: 1rem;
@@ -112,6 +113,9 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
 .hover-bg-light:hover {background-color: var(--light) !important;}
 .hover-text-dark:hover {color: var(--dark) !important;}
+.focus-bg-white:focus {background-color: white !important;}
+.focus-border {border: 1px solid white;}
+.focus-text-dark:focus {color: var(--dark) !important}
 .three-d-btn:hover, .recent-works-left-side:hover, .hover-3d-shadow:hover {box-shadow: 10px 10px 0 rgba(0,0,0,1);}
 .recent-works-left-side:hover > span {opacity: 1 !important;}
 .hover-bg-dark:hover {background-color: var(--dark) !important;}
