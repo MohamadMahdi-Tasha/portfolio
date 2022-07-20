@@ -21,7 +21,7 @@
 	<link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 	<link href="assets/plugins/swiper-js/swiper-bundle.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-skeletons@1.0.3/css/css-skeletons.min.css" />
+	<link rel="stylesheet" href="assets/plugins/css-skeleton/css-skeletons.min.css"/>
 	<!--Title Of Page-->
 	<title>Mahdi Tash | Portfolio</title>
 </head>
@@ -130,7 +130,7 @@
 				major renovations or new lease of life to individual space.
 			</p>
 			<div class='d-flex align-items-center justify-content-center mb-5'>
-				<a href="#"><button class='rounded-pill bg-green border-dark text-dark transition three-d-btn p-2 fs-6'>View All Projects<button></a>
+				<a href="https://github.com/MohamadMahdi-Tasha?tab=repositories" target='_blank'><button class='rounded-pill bg-green border-dark text-dark transition three-d-btn p-2 fs-6'>View All Projects<button></a>
 			</div>
 			<!-- bottom Side-->
 			<ul class='list-unstyled' id='recent-works'>
@@ -322,109 +322,109 @@
 			<h6>&copy; 2022 Copyright By <a href="https://dribbble.com/shots/18051436-Fisma-Creative-Agency-Landing-Page">Fisma</a></h6>
 		</div>
 	</footer>
-	<!--Js Linking-->
-	<noscript>Please Turn On Javascript On Your Browser.</noscript>
-	<script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
-	<script>
-		//Variables
-		const header = document.getElementById('header');
-		const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4, mousewheel: true,})
-		const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
-		const recentWorks = document.getElementById('recent-works');
-		const skeltonParentOfThirdSection = document.querySelectorAll('.skelton-parent-of-third-section');
-		const skeltonOfSecondSection = document.querySelectorAll('.skelton-of-second-section');
-
-		//A Function That Loops Through Numbers And Characters And Returns Random Hex Color
-		function getRandomColor() {
-			const letters = '0123456789ABCDEF';
-			let color = '#';
-
-			for (var i = 0; i < 6; i++) {color += letters[Math.floor(Math.random() * 16)];}
-			return color;
-		}-
-	
-		//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
-		window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-
-		fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
-			.then(result => result.json())
-			.then(result => {
-				skeltonOfSecondSection.forEach(item => item.remove());
-					result.forEach(item => {
-					const swiperSlide = document.createElement('a');
-					const titleOfSlide = document.createElement('h3');
-
-					swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white transition';
-					swiperSlide.style.backgroundColor = getRandomColor();
-					swiperSlide.href = `https://github.com/MohamadMahdi-Tasha/${item.name}`;
-					swiperSlide.target = '_blank';
-					titleOfSlide.textContent = item.name;
-
-					swiperSlide.appendChild(titleOfSlide);
-					secondSectionsSwiperWrapper.appendChild(swiperSlide);
-				})
-			})
-	
-		fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
-			.then(result => result.json())
-			.then(result => {
-				const firstThreeRepos = result.slice(0,5);
-				skeltonParentOfThirdSection.forEach(skelton => skelton.remove());
-
-				firstThreeRepos.forEach(repo => {
-					const li = document.createElement('li');
-					const leftSide = document.createElement('a');
-					const leftSideInitSpan = document.createElement('span');
-					const rightSide = document.createElement('div');
-					const title = document.createElement('h1');
-					const paragraph = document.createElement('p');	
-					const tagsHolder = document.createElement('ul');
-					const leftSideIcon = document.createElement('i');
-					const leftSideSpanInSpan = document.createElement('span');
-
-					li.className = 'w-100 d-inline-flex align-items-center gap-5 recent-repo';
-					leftSide.className = 'recent-works-left-side w-50 d-flex align-items-end fs-4 p-4 transition';
-					leftSide.style.backgroundColor = getRandomColor();
-					leftSideInitSpan.className = 'opacity-0 transition text-white'
-					rightSide.className = 'w-50';
-					title.className = 'text-dark my-fw-extra-bold mb-5';
-					paragraph.className = 'fs-5 text-dark my-fw-regular';
-					tagsHolder.className = 'list-unstyled d-flex flex-wrap w-100 gap-2';
-					leftSideIcon.className = 'bi bi-arrow-up-right-circle mr-1';
-					leftSideSpanInSpan.textContent = 'See Projects';
-	
-					title.textContent = repo.name;
-					paragraph.textContent = repo.description;
-					leftSide.href = `https://www.github.com/MohamadMahdi-Tasha/${repo.name}`;
-
-					repo.topics.forEach(topic => {
-						const tagLink = document.createElement('a');
-						const tag = document.createElement('li');
-						const tagButton = document.createElement('button');
-
-						tagLink.href = `https://www.github.com/topics/${topic}`;
-						tagLink.target = '_blank';
-						tagButton.className = 'p-2 fs-6 rounded-pill border-dark bg-transparent text-dark hover-bg-dark hover-text-light transition';
-						tagButton.textContent = topic;
-						tagLink.appendChild(tagButton);
-						tag.appendChild(tagLink);
-						tagsHolder.appendChild(tag);
-					})
-
-					li.appendChild(leftSide);
-					leftSide.appendChild(leftSideInitSpan);
-					li.appendChild(rightSide);
-					rightSide.appendChild(title);
-					rightSide.appendChild(paragraph);
-					rightSide.appendChild(tagsHolder);
-					leftSideInitSpan.appendChild(leftSideIcon);
-					leftSideInitSpan.appendChild(leftSideSpanInSpan);
-					recentWorks.appendChild(li);
-			})
-
-				firstThreeRepos.forEach(item => console.log(item))
-			})
-</script>
 </body>
+<!--Js Linking-->
+<noscript>Please Turn On Javascript On Your Browser.</noscript>
+<script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
+<script>
+	//Variables
+	const header = document.getElementById('header');
+	const swiper = new Swiper('.defualt-swiper', {slidesPerView: 4, mousewheel: true,})
+	const secondSectionsSwiperWrapper = document.getElementById('second-section-swiper-wrapper');	
+	const recentWorks = document.getElementById('recent-works');
+	const skeltonParentOfThirdSection = document.querySelectorAll('.skelton-parent-of-third-section');
+	const skeltonOfSecondSection = document.querySelectorAll('.skelton-of-second-section');
+
+	//A Function That Loops Through Numbers And Characters And Returns Random Hex Color
+	function getRandomColor() {
+		const letters = '0123456789ABCDEF';
+		let color = '#';
+
+		for (var i = 0; i < 6; i++) {color += letters[Math.floor(Math.random() * 16)];}
+		return color;
+	}
+
+	//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
+	window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+
+	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
+		.then(result => result.json())
+		.then(result => {
+			skeltonOfSecondSection.forEach(item => item.remove());
+			result.forEach(item => {
+				const swiperSlide = document.createElement('a');
+				const titleOfSlide = document.createElement('h3');
+
+				swiperSlide.className = 'swiper-slide p-4 d-flex align-items-center justify-content-center text-white transition';
+				swiperSlide.style.backgroundColor = getRandomColor();
+				swiperSlide.href = `https://github.com/MohamadMahdi-Tasha/${item.name}`;
+				swiperSlide.target = '_blank';
+				titleOfSlide.textContent = item.name;
+
+				swiperSlide.appendChild(titleOfSlide);
+				secondSectionsSwiperWrapper.appendChild(swiperSlide);
+			})
+		})
+	
+	fetch('https://api.github.com/users/MohamadMahdi-Tasha/repos?sort=date')
+		.then(result => result.json())
+		.then(result => {
+			const firstThreeRepos = result.slice(0,5);
+			skeltonParentOfThirdSection.forEach(skelton => skelton.remove());
+
+			firstThreeRepos.forEach(repo => {
+				const li = document.createElement('li');
+				const leftSide = document.createElement('a');
+				const leftSideInitSpan = document.createElement('span');
+				const rightSide = document.createElement('div');
+				const title = document.createElement('h1');
+				const paragraph = document.createElement('p');	
+				const tagsHolder = document.createElement('ul');
+				const leftSideIcon = document.createElement('i');
+				const leftSideSpanInSpan = document.createElement('span');
+
+				li.className = 'w-100 d-inline-flex align-items-center gap-5 recent-repo';
+				leftSide.className = 'recent-works-left-side w-50 d-flex align-items-end fs-4 p-4 transition';
+				leftSide.style.backgroundColor = getRandomColor();
+				leftSideInitSpan.className = 'opacity-0 transition text-white'
+				rightSide.className = 'w-50';
+				title.className = 'text-dark my-fw-extra-bold mb-5';
+				paragraph.className = 'fs-5 text-dark my-fw-regular';
+				tagsHolder.className = 'list-unstyled d-flex flex-wrap w-100 gap-2';
+				leftSideIcon.className = 'bi bi-arrow-up-right-circle mr-1';
+				leftSideSpanInSpan.textContent = 'See Projects';
+
+				title.textContent = repo.name;
+				paragraph.textContent = repo.description;
+				leftSide.href = `https://www.github.com/MohamadMahdi-Tasha/${repo.name}`;
+
+				repo.topics.forEach(topic => {
+					const tagLink = document.createElement('a');
+					const tag = document.createElement('li');
+					const tagButton = document.createElement('button');
+
+					tagLink.href = `https://www.github.com/topics/${topic}`;
+					tagLink.target = '_blank';
+					tagButton.className = 'p-2 fs-6 rounded-pill border-dark bg-transparent text-dark hover-bg-dark hover-text-light transition';
+					tagButton.textContent = topic;
+					tagLink.appendChild(tagButton);
+					tag.appendChild(tagLink);
+					tagsHolder.appendChild(tag);
+				})
+
+				li.appendChild(leftSide);
+				leftSide.appendChild(leftSideInitSpan);
+				li.appendChild(rightSide);
+				rightSide.appendChild(title);
+				rightSide.appendChild(paragraph);
+				rightSide.appendChild(tagsHolder);
+				leftSideInitSpan.appendChild(leftSideIcon);
+				leftSideInitSpan.appendChild(leftSideSpanInSpan);
+				recentWorks.appendChild(li);
+			})
+
+			firstThreeRepos.forEach(item => console.log(item))
+		})
+</script>
 </html>

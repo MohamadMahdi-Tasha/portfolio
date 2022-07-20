@@ -2,6 +2,7 @@
 
 /*Linked Fonts*/
 @import '../fonts/font.css';
+@import '../../plugins/bootstrap-icons/bootstrap-icons.css';
 
 /*Variables*/
 :root {
@@ -76,7 +77,6 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .list-with-ticks > li {display: inline-flex;}
 .list-with-ticks > li:before{
 	content: '\F26E';
-	margin-right: 1rem;
 }
 
 .third-section:after {
