@@ -142,4 +142,10 @@ footer a:hover {text-decoration: underline !important;}
 	.mq-991-text-start, .mq-991-text-start.text-center {text-align: start !important}
 	.fs-75 {font-size: 50px;}
 	main.p-4 {padding: 1rem !important;}
+	.w-1500px {width: 100% !important;}
+	.swiper-wrapper > .swiper-slide:hover {
+		transform: scale(1);
+		z-index: auto;
+		box-shadow: none;
+	}	
 }
