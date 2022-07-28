@@ -129,3 +129,17 @@ footer a:hover {text-decoration: underline !important;}
 	box-shadow: 0 0 30px rgba(0,0,0,.2);
 }
 
+
+/*Media Querys*/
+@media (max-width: 991px) {
+	.mq-991-w-100 {width: 100% !important;}
+	.mq-991-w-50 {width: 50% !important;}
+	.mq-991-d-flex {display: flex !important;}
+	.mq-991-flex-column {flex-direction: column !important;}
+	.mq-991-jc-center {justify-content: center !important;}
+	.mq-991-jc-between {justify-content: between !important;}
+	.mq-991-d-none.d-flex, .mq-991-d-none.d-inline-flex, .mq-991-d-none {display: none !important;}
+	.mq-991-text-start, .mq-991-text-start.text-center {text-align: start !important}
+	.fs-75 {font-size: 50px;}
+	main.p-4 {padding: 1rem !important;}
+}
