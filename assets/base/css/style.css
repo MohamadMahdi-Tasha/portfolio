@@ -32,6 +32,7 @@ body {
 	font-size: 15px;
 	font-weight: 500;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 /*Styles*/
