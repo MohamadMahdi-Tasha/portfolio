@@ -35,10 +35,6 @@ body {
 }
 
 /*Styles*/
-body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5)), footer {
-	display: none;
-}
-
 .my-fw-regular {font-weight: 400;}
 .my-fw-medium {font-weight: 500;}
 .my-fw-bold {font-weight: 700;}
@@ -65,7 +61,7 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .border-light {border: 1px solid var(--light);}
 .mb-5rem {margin-bottom: 5rem;}
 .third-sections-top-side-img {transform: translateY(-95px)}
-.my-text-dark {color: var(--dark)}
+.my-text-dark {color: var(--dark) !important}
 .border-dark {border: 1px solid var(--dark);}
 .three-d-btn {box-shadow: 5px 5px 0 rgba(0,0,0,1);}
 .recent-works-left-side{height: 400px;}
@@ -81,6 +77,11 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .bg-orange {background-color: var(--orange);}
 .fifth-section {background-image: url('../img/fifth-section/img-bg.png');background-color: var(--green)}
 .w-50px {width: 50px !important;}
+.my-bg-light {background-color: var(--light);}
+.footer-social-btn {
+	width: 50px;
+	height: 50px;
+}
 
 .new-feature {
 	border-top-left-radius: 1rem;
@@ -121,6 +122,7 @@ body > section:not(:first-of-type, :nth-of-type(2), :nth-of-type(3), :nth-of-typ
 .hover-bg-dark:hover {background-color: var(--dark) !important;}
 .hover-text-light:hover {color: var(--light) !important}
 .hover-border-dark:hover {border-color: var(--dark)}
+footer a:hover {text-decoration: underline !important;}
 .swiper-wrapper > .swiper-slide:hover {
 	transform: scale(1.25);
 	z-index: 1000;
