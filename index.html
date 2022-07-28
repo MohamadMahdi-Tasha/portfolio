@@ -28,21 +28,31 @@
 	<title>Mahdi Tash | Portfolio</title>
 </head>
 <body>
+	<!--Dark Bg Of Nav-->
+	<div data-opened='false' id="dark-bg-nav"></div>
 	<!--Nav-->
-	<nav>
+	<nav class='my-nav my-bg-dark fixed-top w-25 h-100 3d three-d-shadow d-flex flex-column mq-991-w-75 transition' data-opened='false' id='nav'>
 		<!--Top Side Logo-->
-		<img src="assets\base\img\img-logo-png.png" alt="Logo">
+		<img src="assets\base\img\img-logo-png.png" alt="Logo" class='w-25 mb-3 m-4'>
 		<!--Top Side Input-->
-		<div class="nav-input-holder">
-			<i class="bi bi-search"></i>
-			<input type="text" placeholder='Search'>
-		</div>
+		<form action="#" class="nav-input-holder p-2 rounded-2 d-inline-flex mb-5 m-4">
+			<i class="mr-1 bi bi-search"></i>
+			<input type="text" placeholder='Search' class='bg-transparent border-0 text-white w-100'>
+		</form>
+		<ul class='d-none mq-991-d-block'>
+			<li><a href="#portfolio"><i class="bi bi-briefcase"></i>Portfolio</a></li>
+			<li><a href="#exprience"><i class="bi bi-pen"></i>Experience</a></li>
+			<li><a href="#projects"><i class="bi bi-newspaper"></i>Projects</a></li>
+			<li><a href="#contact"><i class="bi bi-telephone"></i>Contact Me</a></li>
+		</ul>
+		<hr class='d-none mq-991-d-block'>
 		<ul>
 			<li><a href="#"><i class="bi bi-person"></i>People</a></li>
 			<li><a href="#"><i class="bi bi-star"></i>Favourites</a></li>
 			<li><a href="#"><i class="bi bi-bezier"></i>Worflows</a></li>
 			<li><a href="#"><i class="bi bi-megaphone"></i>Updtaes</a></li>
 		</ul>
+		<hr>
 		<ul>
 			<li><a href="#"><i class="bi bi-puzzle"></i>Plug-ins</a></li>
 			<li><a href="#"><i class="bi bi-bell"></i>Notifications</a></li>
@@ -60,7 +70,7 @@
 					<li class='mr-1'><a class='my-text-light' href="#projects">Projects</a></li>
 					<li><a class='my-text-light' href="#contact">Contact Me</a></li>
 				</ul>
-				<button class='bg-green squar-size border-0 text-white fs-3 hover-bg-darker-green transition rounded-circle aspect-ratio'><i class="bi bi-list"></i></button>
+				<button id='nav-toggler' class='bg-green squar-size border-0 text-white fs-3 hover-bg-darker-green transition rounded-circle aspect-ratio'><i class="bi bi-list"></i></button>
 			</main>
 		</header>
 		<!--Main Section (Bottom Side)-->
@@ -360,5 +370,20 @@
 <script>
 	//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
 	window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');		
+	
+	const navToggle = document.getElementById('nav-toggler');
+	const nav = document.getElementById('nav');
+	const darkBgOfNav = document.getElementById('dark-bg-nav');
+	const isNavOpened = nav.getAttribute('data-opened');
+
+	navToggle.addEventListener('click', () => {
+		nav.setAttribute('data-opened', "true");
+		darkBgOfNav.setAttribute('data-opened', "true");
+	})
+
+	darkBgOfNav.addEventListener('click', () => {
+		nav.setAttribute('data-opened', "false")
+		darkBgOfNav.setAttribute('data-opened', "false");
+	})
 </script>
 </html>
