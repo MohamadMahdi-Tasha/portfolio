@@ -106,6 +106,7 @@ body > section:nth-of-type(5) input {border: 1px solid transparent;border-bottom
 	position: fixed;
 	background-color: rgba(0,0,0,.5);
 	transition: .3s;
+	z-index: 1031;
 }
 
 .my-nav {
