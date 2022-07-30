@@ -359,39 +359,35 @@
 			</div>
 		</div>
 	</footer>
+	<!--Js Linking-->
+	<noscript>Please Turn On Javascript On Your Browser.</noscript>
+	<script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
+	<script src="assets/plugins/offline-js/offline.min.js"></script>
+	<script src="assets/plugins/aos/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="assets/base/js/second-sections-fetch.js"></script>
+	<script src="assets/base/js/third-sections-fetch.js"></script>
+	<script src="assets/base/js/variables.js"></script>
+	<script>
+		//Initializing Aos
+		AOS.init();
+	
+		//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
+		window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');		
+
+		// Adding Event Listner On Nav Toggler In Header That Listens To Click And Sets Value Of 'data-opened' Attr To "True" In Nav And Dark Bg Of It.
+		navToggle.addEventListener('click', () => {
+			nav.setAttribute('data-opened', "true");
+			darkBgOfNav.setAttribute('data-opened', "true");
+		})
+
+		// Adding Event Listner On Dark Bg That Listens To Click And Sets Value Of 'data-opened' Attr To "False" In Nav And Dark Bg Of It.
+		darkBgOfNav.addEventListener('click', () => {
+			nav.setAttribute('data-opened', "false")
+			darkBgOfNav.setAttribute('data-opened', "false");
+		})
+	</script>
+
 </body>
-<!--Js Linking-->
-<noscript>Please Turn On Javascript On Your Browser.</noscript>
-<script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="assets/plugins/swiper-js/swiper-bundle.min.js"></script>
-<script src="assets/plugins/offline-js/offline.min.js"></script>
-<script src="assets/plugins/aos/aos.js"></script>
-<script src="assets/base/js/second-sections-fetch.js"></script>
-<script src="assets/base/js/third-sections-fetch.js"></script>
-<script src="assets/base/js/variables.js"></script>
-<script>
-	//Initializing Aos
-	AOS.init();
-	
-	//Adding Event Listner On Window That Listens To Scroll And Adds Class Of 'scrolled' To Header and removes it.
-	window.onscroll = () => (window.scrollY !== 0) ? header.classList.add('scrolled') : header.classList.remove('scrolled');		
-	
-	// Variables
-	const navToggle = document.getElementById('nav-toggler');
-	const nav = document.getElementById('nav');
-	const darkBgOfNav = document.getElementById('dark-bg-nav');
-	const isNavOpened = nav.getAttribute('data-opened');
-
-	// Adding Event Listner On Nav Toggler In Header That Listens To Click And Sets Value Of 'data-opened' Attr To "True" In Nav And Dark Bg Of It.
-	navToggle.addEventListener('click', () => {
-		nav.setAttribute('data-opened', "true");
-		darkBgOfNav.setAttribute('data-opened', "true");
-	})
-
-	// Adding Event Listner On Dark Bg That Listens To Click And Sets Value Of 'data-opened' Attr To "False" In Nav And Dark Bg Of It.
-	darkBgOfNav.addEventListener('click', () => {
-		nav.setAttribute('data-opened', "false")
-		darkBgOfNav.setAttribute('data-opened', "false");
-	})
-</script>
 </html>
