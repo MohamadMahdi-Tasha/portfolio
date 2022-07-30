@@ -72,10 +72,10 @@ body {
 #recent-works > .skelton-parent-of-third-section:nth-of-type(even) {direction: rtl !important;}
 .recent-repo:nth-of-type(even) .mr-1 {margin-left: 1rem !important;} 
 .border-transparent {border: 1px solid transparent;}
-.list-with-ticks > li {display: inline-flex;}
-.list-with-ticks > li::before{content: '\F26E';margin-right: 1rem;}
-.list-with-ticks.ticks-black > li::before{color: var(--dark) !important;}
-.list-with-ticks.ticks-green > li::before{color: var(--green) !important;}
+.list-with-ticks > li {}
+.list-with-ticks > li::marker {content: '✔  ';}
+.list-with-ticks.ticks-black > li::marker{color: var(--dark) !important;}
+.list-with-ticks.ticks-green > li::marker{color: var(--green) !important;}
 .bg-orange {background-color: var(--orange);}
 .fifth-section {background-image: url('../img/fifth-section/img-bg.png');background-color: var(--green)}
 .w-50px {width: 50px !important;}
