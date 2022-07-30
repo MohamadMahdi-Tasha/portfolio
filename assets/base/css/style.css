@@ -12,7 +12,6 @@
 	--dark: #181818;
 	--light: #F3F4F6;
 	--darker-green: #4acf93;
-	--light: rgba(256,256,256,.2);
 	--three-d-shadow: 10px 10px 0 rgba(0,0,0,1);
 }
 
@@ -85,7 +84,7 @@ body {
 .my-bg-light {background-color: var(--light);}
 .my-bg-dark {background-color: var(--dark);}
 .my-nav::-webkit-scrollbar {display: none;}
-.nav-input-holder{background-color: var(--light)}
+.nav-input-holder{background-color: rgba(256,256,256,.2)}
 .my-nav input::placeholder , .nav input, .nav-input-holder {color: rgba(256,256,256,.7) !important;}
 .my-nav-item:hover {background-color: var(--light)}
 .three-d-shadow {box-shadow: var(--three-d-shadow)}
@@ -147,7 +146,7 @@ body {
 }
 
 /*Hover, Active, ...*/
-.my-nav ul a:hover {background-color: var(--light)}
+.my-nav ul a:hover {background-color: rgba(256,256,256,.2)}
 .hover-bg-darker-green:hover {background-color: var(--darker-green);}
 .hover-bg-light:hover {background-color: var(--light) !important;}
 .hover-text-dark:hover {color: var(--dark) !important;}
