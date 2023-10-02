@@ -3,6 +3,13 @@
 import {ReactNode} from "react";
 import {Metadata} from "next";
 import '@/app/index.css';
+import { Poppins } from 'next/font/google';
+
+// Defining Font
+const poppinsFont = Poppins({
+    weight: ['300','400','500','700','900'],
+    subsets: ['latin']
+});
 
 // Defining Metadata Of Page
 export const metadata:Metadata = {
@@ -32,7 +39,7 @@ export default function LayoutComponent({children}:propsType):ReactNode {
     // Returning JSX
     return (
         <html>
-            <body>
+            <body className={poppinsFont.className}>
                 {children}
             </body>
         </html>
