@@ -3,7 +3,13 @@ import type { Config } from 'tailwindcss'
 
 // Defining Configs Of TailwindCSS
 const config: Config = {
-  content: [],
+  content: [
+      './app/page.tsx',
+      './component/*.{tsx,jsx}',
+      './component/**/*.{tsx,jsx}',
+      './chunk/*.{tsx,jsx}',
+      './chunk/**/*.{tsx,jsx}',
+  ],
   theme: {},
   plugins: [],
 }
