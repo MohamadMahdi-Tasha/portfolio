@@ -8,6 +8,8 @@ export const metadata:Metadata = {
     description: "I'm Frontend based in iran.",
     title: "Mahdi Tasha | Creative Frontend Developer",
     viewport: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+    manifest: './manifest.json',
+    robots: './robots.txt',
     openGraph: {
         title: "Mahdi Tasha | Creative Frontend Developer",
         description: "I'm Frontend based in iran.",
@@ -27,5 +29,11 @@ interface propsType{
 // Creating And Exporting Layout Of Page
 export default function LayoutComponent({children}:propsType):ReactNode {
     // Returning JSX
-    return children;
+    return (
+        <html>
+            <body>
+                {children}
+            </body>
+        </html>
+    );
 }
