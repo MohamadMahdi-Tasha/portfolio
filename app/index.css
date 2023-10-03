@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 /*Custom Styles*/
+.click-btn-popup::after {background-image: url('../public/img/img-rounded-traiangle.svg');}
 .holder-bg {
     background-image: radial-gradient(circle, #240046 20%, transparent 10%), radial-gradient(circle, rgba(229,229,229,0.03) 20%, transparent 10%);
     background-position: 50% 50%;
@@ -16,7 +17,6 @@
     background: url('../public/img/texture/img-noise.png');
     animation: 0.2s infinite noise;
 }
-
 
 /*Animations*/
 @keyframes noise {

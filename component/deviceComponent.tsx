@@ -29,7 +29,7 @@ export default function DeviceComponent():ReactNode {
                 </MonitorComponent>
                 <div className={'flex justify-center items-center my-[20px]'}>
                     <div className={'relative'}>
-                        <div className={'absolute hidden top-0 right-0 w-[75px] h-[75px] justify-center items-center rounded-full bg-white'}>
+                        <div className={'absolute z-[3] click-btn-popup flex bottom-[70%] left-[80%] w-[75px] h-[75px] justify-center items-center rounded-full bg-white after:content-[""] after:absolute after:left-0 after:bottom-0 after:w-[20px] after:h-[20px] after:bg-cover'}>
                             <span className={'text-black font-bold text-[16px] block tracking-wide'}>CLICK</span>
                         </div>
                         <ButtonComponent onClick={() => alert('asd')} shadowColor={'shadow-darker-theme active:shadow-darker-theme'} iconName={'power'} iconColor={'text-white/50'} bgColor={'bg-theme'} hasBorder={true} borderColor={'border-theme-orange-dark'} />
