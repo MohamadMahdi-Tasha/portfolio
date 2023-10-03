@@ -13,11 +13,12 @@ const poppinsFont = Poppins({
 
 // Defining Metadata Of Page
 export const metadata:Metadata = {
-    description: "I'm Frontend based in iran.",
+    description: "I'm Frontend based in tehran.",
     title: "Mahdi Tasha | Creative Frontend Developer",
     viewport: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
     manifest: './manifest.json',
     robots: './robots.txt',
+    themeColor: '#240046',
     openGraph: {
         title: "Mahdi Tasha | Creative Frontend Developer",
         description: "I'm Frontend based in iran.",

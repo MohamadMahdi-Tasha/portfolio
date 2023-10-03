@@ -2,11 +2,11 @@
   "name": "Mahdi Tasha | Creative Frontend Developer",
   "short_name": "Mahdi Tasha's Portfolio",
   "orientation": "portrait",
-  "description": "I'm Frontend based in iran.",
+  "description": "I'm Frontend based in tehran.",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#00000",
-  "background_color": "#00000",
+  "theme_color": "#240046",
+  "background_color": "#0f0028",
   "icons": [
     {
       "src": "./img/manifest/img-logo-192.png",
