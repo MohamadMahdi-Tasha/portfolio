@@ -14,10 +14,15 @@ export default function SoundButtonComponent():ReactNode {
 
     // Returning JSX
     return (
-        <button>
-            <div data-muted={isMuted}>
-                <IconComponent name={'sound'} size={20} />
-                <IconComponent name={'sound-off'} size={20} />
+        <button className={'fixed top-[20px] right-[20px] w-[50px] h-[50px] bg-darker-theme overflow-hidden rounded-[10px]'}
+                onClick={() => {
+                    setMuted(prevState => !prevState);
+                    document.body.setAttribute('data-muted', `${isMuted}`);
+                }}
+        >
+            <div data-muted={isMuted} className={'flex flex-col gap-[20px] justify-center items-center data-[muted="true"]:translate-y-[-70px] transition-all duration-500'}>
+                <span className={'text-gray-300 flex justify-center items-center h-[50px]'}><IconComponent name={'sound'} size={20} /></span>
+                <span className={'text-red-500 flex justify-center items-center h-[50px]'}><IconComponent name={'sound-off'} size={20} /></span>
             </div>
         </button>
     );

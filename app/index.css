@@ -5,6 +5,29 @@
 @tailwind utilities;
 
 /*Custom Styles*/
-.noise-img {
+.holder-bg {
+    background-image: radial-gradient(circle, #240046 20%, transparent 10%), radial-gradient(circle, rgba(229,229,229,0.03) 20%, transparent 10%);
+    background-position: 50% 50%;
+    background-size: 1em 1em;
+}
 
+.noise-img {
+    @apply z-[100] absolute top-0 left-0 w-full h-full pointer-events-none mix-blend-overlay;
+    background: url('../public/img/texture/img-noise.png');
+    animation: 0.2s infinite noise;
+}
+
+
+/*Animations*/
+@keyframes noise {
+    0%, 100% {background-position: 0 0;}
+    10% {background-position: -35% -40%;}
+    20% {background-position: -45% 35%;}
+    30% {background-position: 37% -55%;}
+    40% {background-position: 50% 55%;}
+    50% {background-position: -55% 40%;}
+    60% {background-position: 45% 35%;}
+    70% {background-position: -30% 45%;}
+    80% {background-position: 45% 55%;}
+    90% {background-position: -40% 40%;}
 }

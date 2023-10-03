@@ -15,9 +15,15 @@ export default function HomePage():ReactNode {
 
     // Returning JSX
     return (
-        <>
+        <div className={'holder-bg bg-darker-theme min-h-[100vh]'}>
             <SoundButtonComponent />
-            <DeviceComponent isOpened={isDeviceShowing} />
-        </>
+            <div className={'max-w-[1100px] mx-auto px-[20px]'}>
+                {
+                    (isDeviceShowing)
+                        ? <DeviceComponent />
+                        : <h1>The Other One</h1>
+                }
+            </div>
+        </div>
     );
 }
