@@ -19,9 +19,9 @@ export default function DashboardMainMenuComponent():ReactNode {
             <div>
                 <div className={'p-[20px]'}>
                     <MonitorComponent hasWhiteSide={true}>
-                        <div className={'h-[200px] flex justify-center items-center'}>
-                            <Image src={ImageOfLogoWithNoBG.src} alt={'Logo Of Mahdi Tasha'} width={50} height={50} />
-                        </div>
+                        <a href={'https://www.github.com/MohamadMahdi-Tasha'} className={'h-[200px] flex justify-center items-center [&>img]:hover:scale-150'}>
+                            <Image src={ImageOfLogoWithNoBG.src} alt={'Logo Of Mahdi Tasha'} className={'transition-all duration-300'} width={50} height={50} />
+                        </a>
                     </MonitorComponent>
                     <div className={'mt-[20px] p-[15px] rounded-[10px] bg-theme-orange-dark mb-[20px]'}>
                         <div className={'flex line-bg bg-cover rounded-[10px] relative h-[39px]'}>
@@ -31,12 +31,14 @@ export default function DashboardMainMenuComponent():ReactNode {
                             <span className={'block absolute left-[70%] top-[50%] translate-y-[-50%]'}><IconComponent name={'right-arrow-stroke'} size={30} /></span>
                         </div>
                     </div>
-                    <p className={'text-white font-light line-clamp-5 text-[14]'}>
-                        I'm <span className={'font-bold'}>mahdi tasha</span> <br/>
-                        A creative <span className={'font-bold'}>front end developer</span> <br/>
-                        Based in <span className={'font-bold'}>tehran</span> <br/>
-                        With <span className={'font-bold'}>infinite</span> love for this industry :)
-                    </p>
+                    <div className={'p-[10px] bg-theme-orange-dark rounded-[10px]'}>
+                        <p className={'text-white font-light line-clamp-5 text-[14]'}>
+                            I'm <span className={'font-bold'}>mahdi tasha</span> <br/>
+                            A creative <span className={'font-bold'}>front end developer</span> <br/>
+                            Based in <span className={'font-bold'}>tehran</span> <br/>
+                            With <span className={'font-bold'}>infinite</span> love for this industry :)
+                        </p>
+                    </div>
                 </div>
                 <div className={'w-[80%] h-[50px] bg-darker-theme rounded-t-[20px] mx-auto'} />
             </div>
