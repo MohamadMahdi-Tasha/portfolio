@@ -17,7 +17,7 @@ export default function HomePage():ReactNode {
 
     // Returning JSX
     return (
-        <div className={'holder-bg bg-darker-theme min-h-[100vh]'}>
+        <div className={'min-h-[100vh]'}>
             <SoundButtonComponent />
             <div className={'max-w-[1200px] mx-auto px-[20px]'}>
                 {

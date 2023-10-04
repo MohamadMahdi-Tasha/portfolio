@@ -21,17 +21,17 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
             transition={{duration: .5}}
             initial={'hidden'}
             animate={stateOfAnimate}
-            className={'p-[20px] '}
+            className={'py-[30px]'}
         >
-            <div className={'gap-[20px] grid grid-cols-3'}>
+            <div className={'gap-[20px] grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1'}>
                 <DashboardMainMenuComponent />
-                <div className={'grid grid-cols-2 gap-[20px] h-full grid-row-4'}>
-                    <div className={'bg-red-600 col-span-2'} />
-                    <div className={'bg-red-600 col-span-2 row-span-2'} />
+                <div className={'grid lg:grid-cols-2 gap-[20px] h-full grid-row-4'}>
+                    <div className={'bg-red-600 lg:col-span-2'} />
+                    <div className={'bg-red-600 lg:col-span-2 lg:row-span-2'} />
                     <div className={'bg-red-600'} />
                     <div className={'bg-red-600'} />
                 </div>
-                <div className={'bg-theme-orange'} />
+                <div className={'bg-theme-orange lg:grid-cols-1 sm:grid-cols-2 grid-cols-1'} />
             </div>
         </motion.div>
     );

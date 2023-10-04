@@ -16,7 +16,7 @@ export default function MonitorComponent({children, hasWhiteSide = true}:propsTy
             <div className={'bg-theme p-[20px] rounded-[10px] relative overflow-hidden'}>
                 {
                     (hasWhiteSide)
-                        ? <div className={'w-[300px] h-[200px] bg-white/10 -rotate-45 absolute left-[-100px] top-[-90px]'} />
+                        ? <div className={'w-[300px] h-full bg-white/10 -rotate-45 absolute left-[-150px] top-[-100px]'} />
                         : false
                 }
                 <div className={'noise-img'} />
