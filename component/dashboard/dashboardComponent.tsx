@@ -2,6 +2,7 @@
 // Importing Part
 import {ReactNode} from "react";
 import {motion} from 'framer-motion';
+import DashboardMainMenuComponent from "@/component/dashboard/dashboardMainMenuComponent";
 
 // Defining Type Of Props
 interface propsType {
@@ -22,7 +23,7 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
             animate={stateOfAnimate}
             className={'p-[20px]'}
         >
-
+            <DashboardMainMenuComponent />
         </motion.div>
     );
 }
