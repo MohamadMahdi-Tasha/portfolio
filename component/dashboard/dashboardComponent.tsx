@@ -23,8 +23,15 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
             animate={stateOfAnimate}
             className={'p-[20px] '}
         >
-            <div className={'gap-[30px]'}>
+            <div className={'gap-[20px] grid grid-cols-3'}>
                 <DashboardMainMenuComponent />
+                <div className={'grid grid-cols-2 gap-[20px] h-full grid-row-4'}>
+                    <div className={'bg-red-600 col-span-2'} />
+                    <div className={'bg-red-600 col-span-2 row-span-2'} />
+                    <div className={'bg-red-600'} />
+                    <div className={'bg-red-600'} />
+                </div>
+                <div className={'bg-theme-orange'} />
             </div>
         </motion.div>
     );

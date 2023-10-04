@@ -19,7 +19,7 @@ export default function HomePage():ReactNode {
     return (
         <div className={'holder-bg bg-darker-theme min-h-[100vh]'}>
             <SoundButtonComponent />
-            <div className={'max-w-[1100px] mx-auto px-[20px]'}>
+            <div className={'max-w-[1200px] mx-auto px-[20px]'}>
                 {
                     (isDeviceShowing)
                         ? <DeviceComponent stateOfAnimate={stateOfDeviceAnimate} onClickOfButton={() => {
