@@ -7,11 +7,13 @@ import {ReactNode} from "react";
 import {useState} from "react";
 import DeviceComponent from '@/component/deviceComponent';
 import SoundButtonComponent from "@/component/soundButtonComponent";
+import DashboardComponent from "@/component/dashboardComponent";
 
 // Creating And Exporting Home Page Component As Default
 export default function HomePage():ReactNode {
-    // Defining State Of Component
+    // Defining States Of Component
     const [isDeviceShowing, setDeviceShowing] = useState(true);
+    const [stateOfDeviceAnimate, setStateOfDeviceAnimate] = useState('visible');
 
     // Returning JSX
     return (
@@ -20,8 +22,11 @@ export default function HomePage():ReactNode {
             <div className={'max-w-[1100px] mx-auto px-[20px]'}>
                 {
                     (isDeviceShowing)
-                        ? <DeviceComponent />
-                        : <h1>The Other One</h1>
+                        ? <DeviceComponent stateOfAnimate={stateOfDeviceAnimate} onClickOfButton={() => {
+                            setStateOfDeviceAnimate('hidden');
+                            setInterval(() => {setDeviceShowing(false)}, 1000);
+                        }} />
+                        : <DashboardComponent stateOfAnimate={(stateOfDeviceAnimate === 'visible') ? 'hidden' : 'visible'} />
                 }
             </div>
         </div>

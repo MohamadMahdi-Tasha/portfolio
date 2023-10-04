@@ -1,6 +1,9 @@
 // Codes By Mahdi Tasha
+// Forcing nextJS To Render This Component As Client Side Component
+'use client';
+
 // Importing Part
-import {ReactNode} from "react";
+import {MouseEventHandler, ReactNode} from "react";
 import ImageOfCabel from '@/public/img/img-cable.svg';
 import ScrewComponent from "@/chunk/screwComponent";
 import ImageOfDots from '@/public/img/img-device-dots.png';
@@ -9,8 +12,15 @@ import ButtonComponent from '@/chunk/buttonComponent';
 import IconComponent from "@/chunk/iconComponent";
 import {motion} from 'framer-motion';
 
+// Defining Type Of Props
+interface propsType {
+    onClickOfButton: MouseEventHandler;
+    stateOfAnimate: string;
+}
+
 // Creating And Exporting Device Component As Default
-export default function DeviceComponent():ReactNode {
+export default function DeviceComponent({onClickOfButton, stateOfAnimate}:propsType):ReactNode {
+    // Returning JSX
     return (
         <motion.div
             variants={{
@@ -19,7 +29,7 @@ export default function DeviceComponent():ReactNode {
             }}
             transition={{duration: .5}}
             initial={'hidden'}
-            animate={'visible'}
+            animate={stateOfAnimate}
             className={'pb-[20px]'}
         >
             <div className={'relative h-[150px] flex items-center justify-center z-[2]'}>
@@ -71,7 +81,14 @@ export default function DeviceComponent():ReactNode {
                         >
                             <span className={'text-black font-bold text-[16px] block tracking-wide'}>CLICK</span>
                         </motion.div>
-                        <ButtonComponent onClick={() => alert('asd')} shadowColor={'shadow-darker-theme active:shadow-darker-theme'} iconName={'power'} iconColor={'text-white/50'} bgColor={'bg-theme'} hasBorder={true} borderColor={'border-theme-orange-dark'} />
+                        <ButtonComponent onClick={onClickOfButton}
+                                         shadowColor={'shadow-darker-theme active:shadow-darker-theme'}
+                                         iconName={'power'}
+                                         iconColor={'text-white/50'}
+                                         bgColor={'bg-theme'}
+                                         hasBorder={true}
+                                         borderColor={'border-theme-orange-dark'}
+                        />
                     </div>
                 </div>
                 <div className={'flex items-center gap-[20px] justify-between'}>
