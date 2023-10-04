@@ -21,9 +21,11 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
             transition={{duration: .5}}
             initial={'hidden'}
             animate={stateOfAnimate}
-            className={'p-[20px]'}
+            className={'p-[20px] '}
         >
-            <DashboardMainMenuComponent />
+            <div className={'gap-[30px]'}>
+                <DashboardMainMenuComponent />
+            </div>
         </motion.div>
     );
 }

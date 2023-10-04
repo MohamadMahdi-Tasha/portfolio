@@ -4,9 +4,9 @@
 
 // Importing Part
 import {MouseEventHandler, ReactNode} from "react";
-import ImageOfCabel from '@/public/img/img-cable.svg';
+import ImageOfCabel from '@/public/img/device/img-cable.svg';
 import ScrewComponent from "@/chunk/screwComponent";
-import ImageOfDots from '@/public/img/img-device-dots.png';
+import ImageOfDots from '@/public/img/device/img-device-dots.png';
 import MonitorComponent from "@/component/monitorComponent";
 import ButtonComponent from '@/chunk/buttonComponent';
 import IconComponent from "@/chunk/iconComponent";

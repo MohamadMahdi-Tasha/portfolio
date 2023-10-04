@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 /*Custom Styles*/
-.click-btn-popup::after {background-image: url('../public/img/img-rounded-traiangle.svg');}
+.click-btn-popup::after {background-image: url('../public/img/device/img-rounded-traiangle.svg');}
+.line-bg {background-image: url('../public/img/dashboard/img-lines.png');}
 .holder-bg {
     background-image: radial-gradient(circle, #240046 20%, transparent 10%), radial-gradient(circle, rgba(229,229,229,0.03) 20%, transparent 10%);
     background-position: 50% 50%;
