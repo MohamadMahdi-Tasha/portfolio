@@ -7,11 +7,21 @@ import ImageOfDots from '@/public/img/img-device-dots.png';
 import MonitorComponent from "@/component/monitorComponent";
 import ButtonComponent from '@/chunk/buttonComponent';
 import IconComponent from "@/chunk/iconComponent";
+import {motion} from 'framer-motion';
 
 // Creating And Exporting Device Component As Default
 export default function DeviceComponent():ReactNode {
     return (
-        <div className={'pb-[20px]'}>
+        <motion.div
+            variants={{
+                visible: {y: 0, opacity: 100},
+                hidden: {y: -10, opacity: 0}
+            }}
+            transition={{duration: .5}}
+            initial={'hidden'}
+            animate={'visible'}
+            className={'pb-[20px]'}
+        >
             <div className={'relative h-[150px] flex items-center justify-center z-[2]'}>
                 <div className={'w-[5px] h-full bg-theme-orange-dark absolute left-[50%] translate-x-[-50%] z-[1]'} />
                 <img src={ImageOfCabel.src} alt="Cable Image" className={'w-[20px] z-[2]'} />
@@ -24,14 +34,43 @@ export default function DeviceComponent():ReactNode {
                     <span className={'text-white/50'}><ScrewComponent clickable={false} /></span>
                 </div>
                 <MonitorComponent hasWhiteSide={false}>
-                    <h1 className={'text-white text-[30px] font-bold mb-[10px]'}>I'm Mahdi Tasha</h1>
-                    <h3 className={'text-[13px] text-gray-300 font-normal'}>I'm creative front end developer based in tehran. Welcome to my personal dashboard.</h3>
+                    <motion.div
+                        variants={{
+                            visible: {y: 0, opacity: 100},
+                            hidden: {y: -10, opacity: 0}
+                        }}
+                        transition={{duration: 1, delay: 1}}
+                        initial={'hidden'}
+                        animate={'visible'}
+                    >
+                        <h1 className={'text-white text-[30px] font-bold mb-[10px]'}>I'm Mahdi Tasha</h1>
+                        <h3 className={'text-[13px] text-gray-300 font-normal'}>I'm creative front end developer based in tehran. Welcome to my personal dashboard.</h3>
+                    </motion.div>
                 </MonitorComponent>
                 <div className={'flex justify-center items-center my-[20px]'}>
                     <div className={'relative'}>
-                        <div className={'absolute z-[3] click-btn-popup flex bottom-[70%] left-[80%] w-[75px] h-[75px] justify-center items-center rounded-full bg-white after:content-[""] after:absolute after:left-0 after:bottom-0 after:w-[20px] after:h-[20px] after:bg-cover'}>
+                        <motion.div
+                            variants={{
+                                visible: {
+                                    x: 0,
+                                    y: 0,
+                                    opacity: 100,
+                                    rotate: 0
+                                },
+                                hidden: {
+                                    x: -10,
+                                    y: -10,
+                                    opacity: 0,
+                                    rotate: 20
+                                }
+                            }}
+                            transition={{duration: 1, delay: 2}}
+                            initial={'hidden'}
+                            animate={'visible'}
+                            className={'absolute z-[3] click-btn-popup flex bottom-[70%] left-[80%] w-[75px] h-[75px] justify-center items-center rounded-full bg-white after:content-[""] after:absolute after:left-0 after:bottom-0 after:w-[20px] after:h-[20px] after:bg-cover'}
+                        >
                             <span className={'text-black font-bold text-[16px] block tracking-wide'}>CLICK</span>
-                        </div>
+                        </motion.div>
                         <ButtonComponent onClick={() => alert('asd')} shadowColor={'shadow-darker-theme active:shadow-darker-theme'} iconName={'power'} iconColor={'text-white/50'} bgColor={'bg-theme'} hasBorder={true} borderColor={'border-theme-orange-dark'} />
                     </div>
                 </div>
@@ -45,6 +84,6 @@ export default function DeviceComponent():ReactNode {
                 <span className={'text-gray-500 text-[14px] font-bold'}>TURN ON YOUR</span>
                 <span className={'text-white'}><IconComponent name={'sound'} size={16} /></span>
             </div>
-        </div>
+        </motion.div>
     );
 }
