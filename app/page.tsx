@@ -12,8 +12,8 @@ import DashboardComponent from "@/component/dashboard/dashboardComponent";
 // Creating And Exporting Home Page Component As Default
 export default function HomePage():ReactNode {
     // Defining States Of Component
-    const [isDeviceShowing, setDeviceShowing] = useState(true);
-    const [stateOfDeviceAnimate, setStateOfDeviceAnimate] = useState('visible');
+    const [isDeviceShowing, setDeviceShowing] = useState(false);
+    const [stateOfDeviceAnimate, setStateOfDeviceAnimate] = useState('hidden');
 
     // Returning JSX
     return (
