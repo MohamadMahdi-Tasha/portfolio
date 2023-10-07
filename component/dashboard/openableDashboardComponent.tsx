@@ -11,7 +11,7 @@ import {motion} from 'framer-motion';
 // Defining Type Of Props
 interface propsType {
     children: ReactNode;
-    className: string;
+    className?: string;
 }
 
 // Creating And Exporting Openable Dashboard Component Asd Default
