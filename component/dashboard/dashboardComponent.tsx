@@ -26,11 +26,11 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
         >
             <div className={'gap-[20px] grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1'}>
                 <DashboardMainMenuComponent />
-                <div className={'grid lg:grid-cols-2 gap-[20px] h-full grid-row-4'}>
+                <div className={'grid lg:grid-cols-2 lg:grid-rows-4 gap-[20px]'}>
                     <DashboardSocialMenuComponent />
                     <div className={'bg-red-600 lg:col-span-2 lg:row-span-2'} />
-                    <div className={'bg-red-600'} />
-                    <div className={'bg-red-600'} />
+                    <div className={'bg-red-600 col-span-1 lg:row-span-2'} />
+                    <div className={'bg-red-600 col-span-1 lg:row-span-2'} />
                 </div>
                 <div className={'bg-theme-orange lg:grid-cols-1 sm:grid-cols-2 grid-cols-1'} />
             </div>

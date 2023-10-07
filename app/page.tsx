@@ -8,6 +8,7 @@ import {useState} from "react";
 import DeviceComponent from '@/component/deviceComponent';
 import SoundButtonComponent from "@/component/soundButtonComponent";
 import DashboardComponent from "@/component/dashboard/dashboardComponent";
+import DashboardSocialMenuComponent from "@/component/dashboard/dashboardSocialMenuComponent";
 
 // Creating And Exporting Home Page Component As Default
 export default function HomePage():ReactNode {

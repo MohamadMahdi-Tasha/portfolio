@@ -12,22 +12,30 @@ interface propsType {
 export default function SocialComponent({icon}:propsType):ReactNode {
     // Returning JSX
     return (
-        <div>
-            <div>
-                <div />
-                <div />
+        <div className={'bg-darker-theme/60 p-[20px] flex flex-col justify-between rounded-[10px]'}>
+            <div className={'flex items-center justify-between gap-[10px] mb-[10px]'}>
+                <div className={'w-[10px] h-[10px] bg-theme rounded-full'} />
+                <div className={'w-[10px] h-[10px] bg-theme rounded-full'} />
             </div>
-            <ButtonComponent
-                iconName={icon}
-                onClick={() => alert('button-clicked')}
-                hasBorder={false}
-                bgColor={'bg-red-200'}
-                iconColor={'text-red-600'}
-                shadowColor={'shadow-sky-800 active:shadow-sky-800'}
-            />
-            <div>
-                <div />
-                <div />
+            <a target={'_blank'} href={
+                (icon === 'instagram')
+                    ? 'https://www.instagram.com/mahditasha_/'
+                    : (icon === 'github')
+                        ? 'https://github.com/MohamadMahdi-Tasha'
+                        : 'https://www.ponisha.ir/profile/mahditasha'
+            } className={'mx-auto'}>
+                <ButtonComponent
+                    iconName={icon}
+                    onClick={() => false}
+                    hasBorder={false}
+                    bgColor={'bg-theme'}
+                    iconColor={'text-white/80'}
+                    shadowColor={'shadow-darker-theme active:shadow-darker-theme'}
+                />
+            </a>
+            <div className={'flex items-center justify-between gap-[10px] mt-[10px]'}>
+                <div className={'w-[10px] h-[10px] bg-theme rounded-full'} />
+                <div className={'w-[10px] h-[10px] bg-theme rounded-full'} />
             </div>
         </div>
     );
