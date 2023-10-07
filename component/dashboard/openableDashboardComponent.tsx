@@ -11,7 +11,7 @@ import {motion} from 'framer-motion';
 // Defining Type Of Props
 interface propsType {
     children: ReactNode;
-    className?: string;
+    className: string;
 }
 
 // Creating And Exporting Openable Dashboard Component Asd Default
@@ -21,13 +21,7 @@ export default function OpenableDashboardComponent({children, className}:propsTy
 
     // Returning JSX
     return (
-        <div onClick={() => {if (!isOpened) {setOpened(true);}}}
-             className={
-                (className !== null)
-                    ? `${className} bg-theme p-[20px] rounded-[20px] relative overflow-hidden group border border-transparent hover:border-white transition-all duration-500 ${(isOpened) ? '' : 'cursor-pointer'}`
-                    : `bg-theme p-[20px] rounded-[20px] relative overflow-hidden group border border-transparent hover:border-white transition-all duration-500 ${(isOpened) ? '' : 'cursor-pointer'}`
-            }
-        >
+        <div onClick={() => {if (!isOpened) {setOpened(true);}}} className={`bg-theme p-[20px] rounded-[20px] relative overflow-hidden group border border-transparent hover:border-white transition-all duration-500 ${(isOpened) ? '' : 'cursor-pointer'}`}>
             <div className={`absolute top-0 left-0 w-full h-full z-[20] ${(isOpened) ? 'pointer-events-none' : 'pointer-events-auto'}`}>
                 <div>
                     <motion.div
@@ -103,6 +97,7 @@ export default function OpenableDashboardComponent({children, className}:propsTy
                 transition={{duration: 1, delay: .5}}
                 initial={'hidden'}
                 animate={(isOpened) ? 'visible' : 'hidden'}
+                className={className}
             >
                 {children}
             </motion.div>

@@ -25,8 +25,8 @@ export default function ButtonComponent({bgColor,iconColor,iconName,hasBorder,bo
                 <button onClick={onClick}
                         className={
                             (className !== null)
-                                ? `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all ${className}`
-                                : `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all`
+                                ? `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex aspect-square justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all ${className}`
+                                : `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex aspect-square justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all`
                         }
                 >
                     <IconComponent size={(large) ? 30 : 20} name={iconName} />
@@ -39,8 +39,8 @@ export default function ButtonComponent({bgColor,iconColor,iconName,hasBorder,bo
             <button onClick={onClick}
                     className={
                         (className !== null)
-                            ? `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all ${className}`
-                            : `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all`
+                            ? `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex aspect-square justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all ${className}`
+                            : `${bgColor} ${iconColor} ${shadowColor} shadow-[0_0.5em_0] ${(large) ? 'w-[75px] h-[75px]' : 'w-[50px] h-[50px]'} flex aspect-square justify-center items-center rounded-full translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all`
                     }
             >
                 <IconComponent size={(large) ? 30 : 20} name={iconName} />
