@@ -9,7 +9,7 @@ export default function DashboardSocialMenuComponent():ReactNode {
     // Returning JSX
     return (
         <OpenableDashboardComponent
-            wholeClassName={'lg:col-span-2 col-span-1'}
+            wholeClassName={'lg:col-span-2 col-span-1 row-span-1'}
             className={'grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:[&>div:last-of-type]:col-span-1 sm:[&>div:last-of-type]:col-span-2 [&>div:last-of-type]:col-span-1 gap-[20px]'}
         >
             <SocialComponent icon={'instagram'} />

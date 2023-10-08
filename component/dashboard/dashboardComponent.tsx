@@ -33,7 +33,6 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
                     <DashboardSocialMenuComponent />
                     <DashboardPorfolioMenuComponent />
                     <DashboardMComponent />
-                    <div className={'bg-red-600 '} />
                     <div className={'bg-red-600 grid-cols-1 grid-rows-2'} />
                 </div>
                 <div className={'col-span-1 bg-red-600'} />
