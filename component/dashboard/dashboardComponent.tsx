@@ -25,10 +25,15 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
             animate={stateOfAnimate}
             className={'py-[30px]'}
         >
-            <div>
+            <div className={'grid lg:grid-cols-[1fr_1.5fr_1fr] sm:grid-cols-2 grid-cols-1 gap-[20px]'}>
                 <DashboardMainMenuComponent />
-                <DashboardSocialMenuComponent />
-                <DashboardPorfolioMenuComponent />
+                <div className={'grid grid-rows-4 gap-[20px] lg:grid-cols-2 grid-cols-1'}>
+                    <DashboardSocialMenuComponent />
+                    <DashboardPorfolioMenuComponent />
+                    <div className={'bg-red-600 grid-cols-1 grid-rows-2'} />
+                    <div className={'bg-red-600 grid-cols-1 grid-rows-2'} />
+                </div>
+                <div className={'col-span-1 bg-red-600'} />
             </div>
         </motion.div>
     );

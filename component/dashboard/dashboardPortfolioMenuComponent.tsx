@@ -45,7 +45,10 @@ export default function DashboardPortfolioMenuComponent():ReactNode {
 
     // Returning JSX
     return (
-        <OpenableDashboardComponent className={'flex justify-between gap-[30px] h-full flex-col items-start w-full'}>
+        <OpenableDashboardComponent
+            wholeClassName={'lg:row-span-2 lg:col-span-2 col-span-1 row-span-1'}
+            className={'flex justify-between gap-[30px] h-full flex-col items-start w-full'}
+        >
             <div className={'flex sm:flex-row flex-col sm:justify-between sm:gap-[30px] gap-[20px] w-full'}>
                 <div className={'bg-darker-theme flex items-center gap-[10px] px-[20px] py-[10px] rounded-[10px] sm:w-[60%]'}>
                     <span className={'text-theme-orange'}><IconComponent name={'img'} size={20} /></span>
