@@ -5,6 +5,8 @@ import {motion} from 'framer-motion';
 import DashboardMainMenuComponent from "@/component/dashboard/dashboardMainMenuComponent";
 import DashboardSocialMenuComponent from '@/component/dashboard/dashboardSocialMenuComponent';
 import DashboardPorfolioMenuComponent from '@/component/dashboard/dashboardPortfolioMenuComponent';
+import OpenableDashboardComponent from "@/component/dashboard/openableDashboardComponent";
+import DashboardMComponent from "@/component/dashboard/dashboardMComponent";
 
 // Defining Type Of Props
 interface propsType {
@@ -30,7 +32,8 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
                 <div className={'grid grid-rows-4 gap-[20px] lg:grid-cols-2 grid-cols-1'}>
                     <DashboardSocialMenuComponent />
                     <DashboardPorfolioMenuComponent />
-                    <div className={'bg-red-600 grid-cols-1 grid-rows-2'} />
+                    <DashboardMComponent />
+                    <div className={'bg-red-600 '} />
                     <div className={'bg-red-600 grid-cols-1 grid-rows-2'} />
                 </div>
                 <div className={'col-span-1 bg-red-600'} />
