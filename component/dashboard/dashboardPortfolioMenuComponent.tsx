@@ -85,8 +85,8 @@ export default function DashboardPortfolioMenuComponent():ReactNode {
                         >
                             {
                                 data.map((item, index) => (
-                                    <SwiperSlide>
-                                        <DashboardPortfolioComponent img={item.img} title={item.title} link={item.link} key={index} />
+                                    <SwiperSlide key={index}>
+                                        <DashboardPortfolioComponent img={item.img} title={item.title} link={item.link} />
                                     </SwiperSlide>
                                 ))
                             }

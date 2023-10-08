@@ -7,6 +7,7 @@ import DashboardSocialMenuComponent from '@/component/dashboard/dashboardSocialM
 import DashboardPorfolioMenuComponent from '@/component/dashboard/dashboardPortfolioMenuComponent';
 import DashboardMComponent from "@/component/dashboard/dashboardMComponent";
 import DashboardYearsComponent from "@/component/dashboard/dashboardYearsComponent";
+import DashboardSideProjectComponent from "@/component/dashboard/dashboardSideProjectComponent";
 
 // Defining Type Of Props
 interface propsType {
@@ -35,7 +36,7 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
                     <DashboardMComponent />
                     <DashboardYearsComponent />
                 </div>
-                <div className={'col-span-1 bg-red-600'} />
+                <DashboardSideProjectComponent />
             </div>
         </motion.div>
     );
