@@ -9,7 +9,6 @@ import ImageOfLogoWithNoBG from '@/public/img/dashboard/img-logo-nobg.png';
 
 // Creating And Exporting Main Menu Of Dashboard As Default
 export default function DashboardMainMenuComponent():ReactNode {
-    let mmd;
     // Returning JSX
     return (
         <div className={'bg-theme-orange rounded-[20px] overflow-hidden'}>
