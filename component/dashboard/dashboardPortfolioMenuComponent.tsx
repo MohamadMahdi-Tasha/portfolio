@@ -36,11 +36,11 @@ const refrence:DatabaseReference = ref(db, '/portfolio');
 // Creating And Exporting dashboard Portfolio Menu Component As Default
 export default function DashboardPortfolioMenuComponent():ReactNode {
     // Defining States Of Component
-    const [data, setData] = useState([{img: '', title: ''}]);
+    const [data, setData] = useState([{img: '', title: '', link: ''}]);
     const [swiper, setSwiper]:any = useState();
 
     // Reading Data From Firebase
-    useEffect(() => onValue(refrence, (snapshot:DataSnapshot) => setData(snapshot.val())), [])
+    useEffect(() => onValue(refrence, (snapshot: DataSnapshot) => setData(snapshot.val())), [])
 
     // Returning JSX
     return (
@@ -74,13 +74,17 @@ export default function DashboardPortfolioMenuComponent():ReactNode {
             <div className={'w-full'}>
                 <MonitorComponent noPadding hasWhiteSide={false}>
                     <div className={"h-[150px] flex"}>
-                        <Swiper onSwiper={(swiperElement) => setSwiper(swiperElement)} ref={swiper} loop={true} className={'w-full h-full'}>
+                        <Swiper
+                            onSwiper={(swiperElement) => setSwiper(swiperElement)}
+                            loop={true}
+                            className={'w-full h-full'}
+                        >
                             {
                                 data.map((item, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className={'relative overflow-hidden h-full w-full'}>
+                                        <a target={'_blank'} href={item.link} className={'relative overflow-hidden h-full w-full block'}>
                                             <img src={item.img} alt={item.title} className={'w-full h-full object-cover absolute top-0 left-0'} />
-                                        </div>
+                                        </a>
                                      </SwiperSlide>
                                 ))
                             }
