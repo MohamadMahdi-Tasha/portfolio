@@ -12,6 +12,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import {FirebaseApp, initializeApp} from "firebase/app";
 import {getDatabase, ref, onValue, Database, DatabaseReference, DataSnapshot} from "firebase/database";
+import DashboardPortfolioComponent from "@/component/dashboard/dashboardPortfolioComponent";
 
 // Defining Config Of Firebase
 const firebaseConfig = {
@@ -81,11 +82,9 @@ export default function DashboardPortfolioMenuComponent():ReactNode {
                         >
                             {
                                 data.map((item, index) => (
-                                    <SwiperSlide key={index}>
-                                        <a target={'_blank'} href={item.link} className={'relative overflow-hidden h-full w-full block'}>
-                                            <img src={item.img} alt={item.title} className={'w-full h-full object-cover absolute top-0 left-0'} />
-                                        </a>
-                                     </SwiperSlide>
+                                    <SwiperSlide>
+                                        <DashboardPortfolioComponent img={item.img} title={item.title} link={item.link} key={index} />
+                                    </SwiperSlide>
                                 ))
                             }
                         </Swiper>
