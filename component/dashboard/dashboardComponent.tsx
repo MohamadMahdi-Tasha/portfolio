@@ -8,6 +8,7 @@ import DashboardPorfolioMenuComponent from '@/component/dashboard/dashboardPortf
 import DashboardMComponent from "@/component/dashboard/dashboardMComponent";
 import DashboardYearsComponent from "@/component/dashboard/dashboardYearsComponent";
 import DashboardSideProjectComponent from "@/component/dashboard/dashboardSideProjectComponent";
+import DashboardBottomComponent from "@/component/dashboard/dashboardBottomComponent";
 
 // Defining Type Of Props
 interface propsType {
@@ -28,7 +29,7 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
             animate={stateOfAnimate}
             className={'py-[30px]'}
         >
-            <div className={'grid lg:grid-cols-[1fr_1.5fr_1fr] sm:grid-cols-2 grid-cols-1 gap-[20px]'}>
+            <div className={'grid lg:grid-cols-[1fr_1.5fr_1fr] sm:grid-cols-2 grid-cols-1 gap-[20px] mb-[20px]'}>
                 <DashboardMainMenuComponent />
                 <div className={'grid lg:grid-rows-[auto_2fr_1fr] grid-rows-1 gap-[20px] lg:grid-cols-2 grid-cols-1'}>
                     <DashboardSocialMenuComponent />
@@ -38,6 +39,7 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
                 </div>
                 <DashboardSideProjectComponent />
             </div>
+            <DashboardBottomComponent />
         </motion.div>
     );
 }
