@@ -8,12 +8,12 @@ export default function DashboardYearsComponent():ReactNode {
     // Returning JSX
     return (
         <OpenableDashboardComponent
-            wholeClassName={'row-span-1'}
+            wholeClassName={'overflow'}
             className={'h-full flex flex-col sm:justify-between justify-center items-center w-full'}
         >
-            <div className={'sm:flex hidden justify-between items-center gap-[20px] w-full'}>
-                <div className={'w-[10px] h-[10px] bg-white/20 rounded-full'} />
-                <div className={'w-[10px] h-[10px] bg-white/20 rounded-full'} />
+            <div className={'flex justify-between items-center gap-[20px] w-full'}>
+                <div className={'w-[10px] h-[10px] bg-darker-theme rounded-full'} />
+                <div className={'w-[10px] h-[10px] bg-darker-theme rounded-full'} />
             </div>
             <div>
                 <div className={'mb-[20px] w-[50px] h-[50px] mx-auto bg-theme-orange flex items-center justify-center rounded-full shadow-[0_0.5em_0] shadow-theme-orange-dark'}>
@@ -21,9 +21,9 @@ export default function DashboardYearsComponent():ReactNode {
                 </div>
                 <span className={'text-gray-500 font-bold text-[14px] text-center block'}>YEARS <br/> OF EXPERIENCE</span>
             </div>
-            <div className={'sm:flex hidden justify-between items-center gap-[20px] w-full'}>
-                <div className={'w-[10px] h-[10px] bg-white/20 rounded-full'} />
-                <div className={'w-[10px] h-[10px] bg-white/20 rounded-full'} />
+            <div className={'flex justify-between items-center gap-[20px] w-full'}>
+                <div className={'w-[10px] h-[10px] bg-darker-theme rounded-full'} />
+                <div className={'w-[10px] h-[10px] bg-darker-theme rounded-full'} />
             </div>
         </OpenableDashboardComponent>
     );

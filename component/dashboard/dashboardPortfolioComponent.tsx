@@ -22,7 +22,7 @@ export default function DashboardPortfolioComponent({img, title, link}:propsType
     // Returning JSX
     return (
         <div className={'relative overflow-hidden h-full w-full'}>
-            <a target={'_blank'} href={link} className={'relative overflow-hidden h-full w-full block'}>
+            <a tabIndex={-1} target={'_blank'} href={link} className={'relative overflow-hidden h-full w-full block'}>
                 <motion.div
                     variants={{
                         hidden: {opacity: 0, y: '-100%'},

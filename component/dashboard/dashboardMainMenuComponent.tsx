@@ -16,8 +16,8 @@ export default function DashboardMainMenuComponent():ReactNode {
                 <h1 className={'text-white font-bold text-[14px] truncate tracking-wide'}>MOHAMAD MAHDI TASHA</h1>
                 <img className={'w-[50px] lg:block hidden shrink-0'} src={ImageOfDots.src} alt="Image Of Dots"/>
             </div>
-            <div>
-                <div className={'p-[20px]'}>
+            <div className={'flex flex-col gap-[10px] justify-between items-center w-full p-[20px] h-[96%]'}>
+                <div className={'w-full'}>
                     <MonitorComponent hasWhiteSide={true}>
                         <a href={'https://www.github.com/MohamadMahdi-Tasha'} className={'h-[200px] flex justify-center items-center [&>img]:hover:scale-150'}>
                             <Image src={ImageOfLogoWithNoBG.src} alt={'Logo Of Mahdi Tasha'} className={'transition-all duration-300'} width={50} height={50} />

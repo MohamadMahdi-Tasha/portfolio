@@ -46,15 +46,15 @@ export default function DashboardPortfolioMenuComponent():ReactNode {
     // Returning JSX
     return (
         <OpenableDashboardComponent
-            wholeClassName={'lg:row-span-2 lg:col-span-2 col-span-1 row-span-1'}
+            wholeClassName={'lg:col-span-2 col-span-1 overflow-hidden'}
             className={'flex justify-between gap-[30px] h-full flex-col items-start w-full'}
         >
-            <div className={'flex sm:flex-row flex-col sm:justify-between sm:gap-[30px] gap-[20px] w-full'}>
-                <div className={'bg-darker-theme flex items-center gap-[10px] px-[20px] py-[10px] rounded-[10px] sm:w-[60%]'}>
+            <div className={'flex lg:flex-row flex-col lg:justify-between lg:gap-[30px] gap-[20px] w-full'}>
+                <div className={'bg-darker-theme flex items-center gap-[10px] px-[20px] py-[10px] rounded-[10px] lg:w-[60%]'}>
                     <span className={'text-theme-orange'}><IconComponent name={'img'} size={20} /></span>
                     <span className={'text-white text-[14px] truncate'}>PORTFOLIO</span>
                 </div>
-                <div className={'flex items-center sm:justify-end justify-center gap-[20px] sm:w-[40%]'}>
+                <div className={'flex items-center lg:justify-end justify-center gap-[20px] lg:w-[40%]'}>
                     <ButtonComponent
                         iconName={'left-arrow'}
                         bgColor={'bg-theme'}

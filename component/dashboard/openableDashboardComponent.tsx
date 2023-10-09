@@ -45,8 +45,8 @@ export default function OpenableDashboardComponent({children, className, wholeCl
                     </motion.div>
                     <motion.div
                         variants={{
-                            visible: {opacity: 1},
-                            hidden: {opacity: 0}
+                            visible: {opacity: 1,visibility: 'visible'},
+                            hidden: {opacity: 0,visibility: 'hidden'}
                         }}
                         transition={{duration: .5,}}
                         initial={'visible'}
