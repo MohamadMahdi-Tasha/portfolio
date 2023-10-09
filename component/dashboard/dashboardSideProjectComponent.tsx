@@ -3,7 +3,6 @@
 import {ReactNode} from 'react';
 import OpenableDashboardComponent from "@/component/dashboard/openableDashboardComponent";
 import IconComponent from "@/chunk/iconComponent";
-import DotsImage from '@/public/img/device/img-device-dots.png';
 import SideProjectComponent from "@/chunk/sideProjectComponent";
 import ScrewComponent from "@/chunk/screwComponent";
 
@@ -11,22 +10,21 @@ import ScrewComponent from "@/chunk/screwComponent";
 export default function DashboardSideProjectComponent():ReactNode {
     // Returning JSX
     return (
-        <OpenableDashboardComponent>
-            <div>
-                <span><IconComponent name={'coffee'} size={20} /></span>
-                <span>SIDE-PROJECTS</span>
-                <img src={DotsImage.src} alt="Image Of Dots"/>
+        <OpenableDashboardComponent className={'grid grid-rows-4'}>
+            <div className={'flex items-center gap-[30px] bg-darker-theme rounded-[10px] p-[20px] mb-[20px] row-span-1'}>
+                <span className={'block text-theme-orange'}><IconComponent name={'coffee'} size={20} /></span>
+                <span className={'block truncate text-white font-bold tracking-wide'}>SIDE-PROJECTS</span>
             </div>
-            <div>
+            <div className={'grid grid-cols-2 gap-[20px] mb-[20px] row-span-1'}>
                 <SideProjectComponent onClick={() => alert('asd')} icon={'s'} />
                 <SideProjectComponent onClick={() => alert('asd')} icon={'s'} />
             </div>
-            <div>
-                <div>
-                    <ScrewComponent clickable={true} onClick={() => alert('asd')} />
-                    <ScrewComponent clickable={true} onClick={() => alert('asd')} />
+            <div className={'bg-darker-theme p-[20px] rounded-[20px] row-span-2'}>
+                <div className={'flex justify-between items-center mb-[20px]'}>
+                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
+                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
                 </div>
-                <svg width="188" height="189" viewBox="0 0 188 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={'mx-auto w-[60%] aspect-square'} viewBox="0 0 188 189" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="57.2833" cy="8.57532" r="7.89563" fill="#3B3B44"/>
                     <circle cx="81.8478" cy="8.57532" r="7.89563" fill="#3B3B44"/>
                     <circle cx="106.411" cy="8.57532" r="7.89563" fill="#3B3B44"/>
@@ -80,9 +78,9 @@ export default function DashboardSideProjectComponent():ReactNode {
                     <circle cx="106.411" cy="180.525" r="7.89563" fill="#3B3B44"/>
                     <circle cx="130.976" cy="180.525" r="7.89563" fill="#3B3B44"/>
                 </svg>
-                <div>
-                    <ScrewComponent clickable={true} onClick={() => alert('asd')} />
-                    <ScrewComponent clickable={true} onClick={() => alert('asd')} />
+                <div className={'flex justify-between items-center mt-[20px]'}>
+                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
+                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
                 </div>
             </div>
         </OpenableDashboardComponent>

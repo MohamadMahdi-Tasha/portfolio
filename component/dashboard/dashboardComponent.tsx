@@ -30,7 +30,7 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
         >
             <div className={'grid lg:grid-cols-[1fr_1.5fr_1fr] sm:grid-cols-2 grid-cols-1 gap-[20px]'}>
                 <DashboardMainMenuComponent />
-                <div className={'grid grid-rows-4 gap-[20px] lg:grid-cols-2 grid-cols-1'}>
+                <div className={'hidden'}>
                     <DashboardSocialMenuComponent />
                     <DashboardPorfolioMenuComponent />
                     <DashboardMComponent />

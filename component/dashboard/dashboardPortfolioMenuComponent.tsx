@@ -77,7 +77,7 @@ export default function DashboardPortfolioMenuComponent():ReactNode {
             </div>
             <div className={'w-full'}>
                 <MonitorComponent noPadding hasWhiteSide={false}>
-                    <div className={"h-[150px] flex"}>
+                    <div className={"h-[200px] flex"}>
                         <Swiper
                             onSwiper={(swiperElement) => setSwiper(swiperElement)}
                             loop={true}
