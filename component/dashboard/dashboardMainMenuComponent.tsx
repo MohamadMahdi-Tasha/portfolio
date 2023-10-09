@@ -1,17 +1,31 @@
 // Codes By Mahdi Tasha
+// Forcing NextJS To Render This Component As Client Side Component
+'use client';
+
 // Importing Part
-import {ReactNode} from "react";
+import {ReactNode, useState} from "react";
 import ImageOfDots from "@/public/img/device/img-device-dots.png";
 import MonitorComponent from "@/component/monitorComponent";
-import IconComponent from "@/chunk/iconComponent";
 import Image from 'next/image';
 import ImageOfLogoWithNoBG from '@/public/img/dashboard/img-logo-nobg.png';
+import ModalComponent from "@/component/modalComponent";
 
 // Creating And Exporting Main Menu Of Dashboard As Default
 export default function DashboardMainMenuComponent():ReactNode {
+    // Defining State Of Component
+    const [isMailModalOpened, setMailModalOpened] = useState(false);
+
     // Returning JSX
     return (
         <div className={'bg-theme-orange rounded-[20px] overflow-hidden'}>
+            <ModalComponent isOpened={isMailModalOpened}
+                            icon={'mail'}
+                            title={'asdsd'}
+                            closeFunction={() => setMailModalOpened(false)}
+                            showsMonitorForHiring={true}
+            >
+                <h1>mail modal</h1>
+            </ModalComponent>
             <div className={'p-[20px] border-b-4 border-b-theme-orange-dark flex justify-between items-center gap-[20px]'}>
                 <h1 className={'text-white font-bold text-[14px] truncate tracking-wide'}>MOHAMAD MAHDI TASHA</h1>
                 <img className={'w-[50px] lg:block hidden shrink-0'} src={ImageOfDots.src} alt="Image Of Dots"/>
@@ -23,7 +37,7 @@ export default function DashboardMainMenuComponent():ReactNode {
                             <Image src={ImageOfLogoWithNoBG.src} alt={'Logo Of Mahdi Tasha'} className={'transition-all duration-300'} width={50} height={50} />
                         </a>
                     </MonitorComponent>
-                    <button className={`bg-sky-500 text-sky-300 shadow-sky-800 shadow-[0_0.5em_0] px-auto py-[10px] rounded-[10px] translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all w-full mt-[20px] mb-[18px]`}>
+                    <button onClick={() => setMailModalOpened(true)} className={`bg-sky-500 text-sky-300 shadow-sky-800 shadow-[0_0.5em_0] px-auto py-[10px] rounded-[10px] translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all w-full mt-[20px] mb-[18px]`}>
                         CONTACT ME
                     </button>
                     <div className={'p-[10px] bg-theme-orange-dark rounded-[10px] h-[300px] overflow-auto'}>

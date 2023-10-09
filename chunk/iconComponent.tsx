@@ -93,7 +93,6 @@ export default function IconComponent({name, size}:propsType):ReactNode {
         );
     } else if (name === 'coffee') {
         return (
-
             <svg fill="none" width={size} height={size} viewBox="0 0 23 25" xmlns="http://www.w3.org/2000/svg">
                 <clipPath id="a">
                     <path d="m.134766.875h22v24h-22z"/>
@@ -105,6 +104,20 @@ export default function IconComponent({name, size}:propsType):ReactNode {
                     <rect height="5" rx="1.5" width="3" x="3" y="1"/>
                     <rect height="5" rx="1.5" width="3" x="3" y="1"/>
                 </g>
+            </svg>
+        );
+    } else if (name === 'mail') {
+        return (
+            <svg width={size} height={size} viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.2772" y="1.52231" width="21.1958" height="14.7073" rx="1.94656" stroke="currentColor" strokeWidth="2.59541" strokeLinejoin="round"/>
+                <path d="M13.163 8.18966C12.8667 8.39499 12.474 8.39499 12.1777 8.18966L5.04921 3.25093C4.35215 2.768 4.69391 1.67466 5.5419 1.67466L19.7988 1.67466C20.6468 1.67466 20.9885 2.768 20.2915 3.25093L13.163 8.18966Z" fill="currentColor" stroke="currentColor" strokeWidth="2.59541" strokeLinejoin="round"/>
+            </svg>
+        );
+    } else if (name === 'x') {
+        return (
+            <svg width={size} height={size} viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.92773 17.7383L18.0699 3.59614" stroke="currentColor" strokeWidth="6.21514" strokeLinecap="round"/>
+                <path d="M18.0693 17.7383L3.9272 3.59615" stroke="currentColor" strokeWidth="6.21514" strokeLinecap="round"/>
             </svg>
         );
     }
