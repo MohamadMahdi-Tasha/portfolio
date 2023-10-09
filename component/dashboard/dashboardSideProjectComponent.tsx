@@ -5,6 +5,7 @@ import OpenableDashboardComponent from "@/component/dashboard/openableDashboardC
 import IconComponent from "@/chunk/iconComponent";
 import SideProjectComponent from "@/chunk/sideProjectComponent";
 import ScrewComponent from "@/chunk/screwComponent";
+import SoundImage from '@/public/img/dashboard/img-sound-dot.svg';
 
 // Creating And Exporting Dashboard Side Project Component As Default
 export default function DashboardSideProjectComponent():ReactNode {
@@ -24,60 +25,7 @@ export default function DashboardSideProjectComponent():ReactNode {
                     <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
                     <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
                 </div>
-                <svg className={'mx-auto w-[60%] aspect-square'} viewBox="0 0 188 189" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="57.2833" cy="8.57532" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="8.57532" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.411" cy="8.57532" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.976" cy="8.57532" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="32.7198" cy="33.1398" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="57.2843" cy="33.1398" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="33.1398" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.412" cy="33.1398" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.977" cy="33.1398" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="155.541" cy="33.1398" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="8.15539" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="32.7198" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="57.2833" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.412" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.977" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="155.54" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="180.105" cy="57.7042" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="8.15539" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="32.7198" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="57.2833" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.412" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.977" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="155.54" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="180.105" cy="82.2687" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="8.15539" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="32.7198" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="57.2833" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.412" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.977" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="155.54" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="180.105" cy="106.831" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="8.15539" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="32.7198" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="57.2833" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.412" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.977" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="155.54" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="180.105" cy="131.396" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="32.7198" cy="155.96" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="57.2843" cy="155.96" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="155.96" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.412" cy="155.96" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.977" cy="155.96" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="155.541" cy="155.96" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="57.2833" cy="180.525" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="81.8478" cy="180.525" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="106.411" cy="180.525" r="7.89563" fill="#3B3B44"/>
-                    <circle cx="130.976" cy="180.525" r="7.89563" fill="#3B3B44"/>
-                </svg>
+                <img src={SoundImage.src} className={'mx-auto w-[60%] aspect-square'} alt="Sound Dots Image"/>
                 <div className={'flex justify-between items-center w-full'}>
                     <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
                     <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
