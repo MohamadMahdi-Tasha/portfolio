@@ -6,7 +6,6 @@
 
 /*Custom Styles*/
 .click-btn-popup::after {background-image: url('../public/img/device/img-rounded-traiangle.svg');}
-.line-bg {background-image: url('../public/img/dashboard/img-lines.png');}
 
 .small-lines-on-door {
     background: linear-gradient(45deg, #440083FF 7.5%, #240046 7.5%, #240046 42.5%, #440083FF 42.5%, #440083FF 57.5%, #240046 57.5%, #240046 92.5%, #440083FF 92.5%);

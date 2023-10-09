@@ -23,16 +23,9 @@ export default function DashboardMainMenuComponent():ReactNode {
                             <Image src={ImageOfLogoWithNoBG.src} alt={'Logo Of Mahdi Tasha'} className={'transition-all duration-300'} width={50} height={50} />
                         </a>
                     </MonitorComponent>
-                    <div className={'mt-[20px] p-[15px] rounded-[10px] bg-theme-orange-dark mb-[20px] overflow-hidden'}>
-                        <div className={'flex line-bg bg-cover rounded-[10px] relative h-[39px]'}>
-                            <button
-                                className={'bg-sky-500 z-[2] absolute whitespace-nowrap top-0 px-[20px] py-[10px] rounded-[5px] text-sky-700 font-bold text-[14px] tracking-wide shadow-[0_0.5em_0] shadow-sky-800 translate-y-[-10px] transition-all hover:shadow-transparent hover:translate-y-0 duration-400 active:translate-y-0'}
-                            >
-                                CONTACT ME
-                            </button>
-                            <span className={'block absolute left-[70%] top-[50%] translate-y-[-50%]'}><IconComponent name={'right-arrow-stroke'} size={30} /></span>
-                        </div>
-                    </div>
+                    <button className={`bg-sky-500 text-sky-300 shadow-sky-800 shadow-[0_0.5em_0] px-auto py-[10px] rounded-[10px] translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all w-full mt-[20px] mb-[18px]`}>
+                        CONTACT ME
+                    </button>
                     <div className={'p-[10px] bg-theme-orange-dark rounded-[10px] h-[300px] overflow-auto'}>
                         <p className={'text-white font-light text-[15px]'}>
                             <span className={'text-[17px] font-bold block truncate mb-[5px]'}>About Me:</span>
