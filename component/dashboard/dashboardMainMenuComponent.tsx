@@ -3,28 +3,68 @@
 'use client';
 
 // Importing Part
-import {ReactNode, useState} from "react";
+import {ReactNode, useState, Dispatch, ChangeEvent} from "react";
 import ImageOfDots from "@/public/img/device/img-device-dots.png";
 import MonitorComponent from "@/component/monitorComponent";
 import Image from 'next/image';
 import ImageOfLogoWithNoBG from '@/public/img/dashboard/img-logo-nobg.png';
 import ModalComponent from "@/component/modalComponent";
+import emailjs from '@emailjs/browser';
+import IconComponent from "@/chunk/iconComponent";
 
 // Creating And Exporting Main Menu Of Dashboard As Default
 export default function DashboardMainMenuComponent():ReactNode {
-    // Defining State Of Component
-    const [isMailModalOpened, setMailModalOpened] = useState(false);
+    // Defining States Of Component
+    const [isMailModalOpened, setMailModalOpened]:[boolean, Dispatch<boolean>] = useState(false);
+    const [emailOfForm, setEmailOfForm] = useState('');
+    const [textOfForm, setTextOfForm] = useState('');
+    const [isEmailFetching, setEmailFetching] = useState(false);
+    const [isFetchingErrored, setFetchingErrored] = useState(false);
 
     // Returning JSX
     return (
         <div className={'bg-theme-orange rounded-[20px] overflow-hidden'}>
             <ModalComponent isOpened={isMailModalOpened}
                             icon={'mail'}
-                            title={'asdsd'}
+                            title={'imwhdiiii@gmail.com'}
                             closeFunction={() => setMailModalOpened(false)}
                             showsMonitorForHiring={true}
             >
-                <h1>mail modal</h1>
+                <form onSubmit={(event) => {
+                    event.preventDefault();
+
+                    setEmailFetching(true);
+
+                    emailjs.send("service_3uav1nm","template_on3f91r", {
+                        from_name: emailOfForm,
+                        to_name: "Mahdi Tasha",
+                        message: textOfForm,
+                    }, 'xXUYTg6DSEBslquaA')
+                        .then(() => setEmailFetching(false))
+                        .catch(() => {
+                            setFetchingErrored(true);
+                            setEmailFetching(false);
+                        })
+                }} action="#">
+                    <input onChange={(event) => setEmailOfForm(event.target.value)} required className={'input mb-[15px]'} name="email" id={'email-input'} type="email" placeholder={'yours@gmail.com'}/>
+                    <textarea onChange={(event) => setTextOfForm(event.target.value)} required className={'input h-[100px] resize-none mb-[20px]'} name="massage" id="massage-input" placeholder={'You Massage'} />
+                    {
+                        (isFetchingErrored)
+                            ? (
+                                <div className={'p-[10px] rounded-[10px] bg-theme-orange-dark my-[20px] '}>
+                                    <p className={'text-white text-[16px]'}>There Was Error Sending Email.</p>
+                                </div>
+                            ) : false
+                    }
+                    <div className={'rounded-[10px] px-[10px] py-[20px] bg-theme-orange-dark'}>
+                        <button className={'primary-btn overflow-hidden h-[50px] relative'}>
+                            <div data-fetching={isEmailFetching} className={'data-[fetching="false"]:translate-y-[-5px] duration-300 transition-all data-[fetching="true"]:translate-y-[-45px]'}>
+                                <span className={'flex justify-center items-center h-[40px]'}>SUBMIT</span>
+                                <span className={'text-sky-900 h-[40px] flex justify-center items-center'}><IconComponent size={30} name={'spinner'} /></span>
+                            </div>
+                        </button>
+                    </div>
+                </form>
             </ModalComponent>
             <div className={'p-[20px] border-b-4 border-b-theme-orange-dark flex justify-between items-center gap-[20px]'}>
                 <h1 className={'text-white font-bold text-[14px] truncate tracking-wide'}>MOHAMAD MAHDI TASHA</h1>
