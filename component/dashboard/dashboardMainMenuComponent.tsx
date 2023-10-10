@@ -30,8 +30,8 @@ export default function DashboardMainMenuComponent():ReactNode {
                 <h1 className={'text-white font-bold text-[14px] truncate tracking-wide'}>MOHAMAD MAHDI TASHA</h1>
                 <img className={'w-[50px] lg:block hidden shrink-0'} src={ImageOfDots.src} alt="Image Of Dots"/>
             </div>
-            <div className={'flex flex-col gap-[10px] justify-between items-center w-full p-[20px] h-[96%]'}>
-                <div className={'w-full'}>
+            <div className={'lg:flex flex-col gap-[10px] justify-between items-center w-full h-[96%]'}>
+                <div className={'w-full p-[20px]'}>
                     <MonitorComponent hasWhiteSide={true}>
                         <a href={'https://www.github.com/MohamadMahdi-Tasha'} className={'h-[200px] flex justify-center items-center [&>img]:hover:scale-150'}>
                             <Image src={ImageOfLogoWithNoBG.src} alt={'Logo Of Mahdi Tasha'} className={'transition-all duration-300'} width={50} height={50} />
@@ -40,7 +40,7 @@ export default function DashboardMainMenuComponent():ReactNode {
                     <button onClick={() => setMailModalOpened(true)} className={`bg-sky-500 text-sky-300 shadow-sky-800 shadow-[0_0.5em_0] px-auto py-[10px] rounded-[10px] translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all w-full mt-[20px] mb-[18px]`}>
                         CONTACT ME
                     </button>
-                    <div className={'p-[10px] bg-theme-orange-dark rounded-[10px] h-[300px] overflow-auto'}>
+                    <div className={'p-[10px] bg-theme-orange-dark rounded-[10px] lg:h-[300px] overflow-auto'}>
                         <p className={'text-white font-light text-[15px]'}>
                             <span className={'text-[17px] font-bold block truncate mb-[5px]'}>About Me:</span>
                             I'm <span className={'font-bold'}>mahdi tasha</span> <br/>
@@ -74,7 +74,7 @@ export default function DashboardMainMenuComponent():ReactNode {
                         </p>
                     </div>
                 </div>
-                <div className={'w-[80%] h-[50px] bg-darker-theme rounded-t-[20px] mx-auto'} />
+                <div className={'lg:w-[70%] w-[90%] lg:h-[80px] h-[50px] bg-darker-theme rounded-t-[20px] mx-auto'} />
             </div>
         </div>
     );
