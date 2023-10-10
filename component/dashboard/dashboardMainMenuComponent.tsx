@@ -37,7 +37,7 @@ export default function DashboardMainMenuComponent():ReactNode {
                             <Image src={ImageOfLogoWithNoBG.src} alt={'Logo Of Mahdi Tasha'} className={'transition-all duration-300'} width={50} height={50} />
                         </a>
                     </MonitorComponent>
-                    <button onClick={() => setMailModalOpened(true)} className={`bg-sky-500 text-sky-300 shadow-sky-800 shadow-[0_0.5em_0] px-auto py-[10px] rounded-[10px] translate-y-[-6px] hover:translate-y-0 active:translate-y-0 hover:shadow-[transparent] active:shadow-[0_inset_-0.5em_0] duration-400 transition-all w-full mt-[20px] mb-[18px]`}>
+                    <button onClick={() => setMailModalOpened(true)} className={'primary-btn mt-[20px] mb-[18px]'}>
                         CONTACT ME
                     </button>
                     <div className={'p-[10px] bg-theme-orange-dark rounded-[10px] lg:h-[300px] overflow-auto'}>

@@ -6,6 +6,7 @@
 
 /*Custom Styles*/
 .click-btn-popup::after {background-image: url('../public/img/device/img-rounded-traiangle.svg');}
+.primary-btn {@apply bg-sky-500 text-sky-100 w-full p-[10px] text-center text-[15px] font-bold tracking-wide uppercase shadow-sky-900 shadow-[0_0.5em_0] rounded-[5px] -translate-y-[10px] transition-all duration-300 hover:translate-y-0 active:translate-y-0 hover:shadow-transparent active:shadow-sky-900 active:shadow-[0_inset_-0.5em_0]}
 
 .small-lines-on-door {
     background: linear-gradient(45deg, #440083FF 7.5%, #240046 7.5%, #240046 42.5%, #440083FF 42.5%, #440083FF 57.5%, #240046 57.5%, #240046 92.5%, #440083FF 92.5%);

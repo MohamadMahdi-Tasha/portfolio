@@ -19,7 +19,7 @@ export default function SideProjectComponent({icon, onClick}:propsType):ReactNod
                 <div className={'w-[10px] h-[10px] bg-theme rounded-full'} />
             </div>
             <ButtonComponent
-                iconName={'sound'}
+                iconName={icon}
                 hasBorder={false}
                 bgColor={'bg-theme'}
                 iconColor={'text-white/80'}

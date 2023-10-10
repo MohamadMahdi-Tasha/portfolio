@@ -40,7 +40,7 @@ export default function LayoutComponent({children}:propsType):ReactNode {
     // Returning JSX
     return (
         <html>
-            <body className={`${poppinsFont.className} overflow-x-hidden holder-bg bg-darker-theme`}>
+            <body className={`${poppinsFont.className} overflow-x-hidden overflow-y-auto holder-bg bg-darker-theme`}>
                 {children}
             </body>
         </html>

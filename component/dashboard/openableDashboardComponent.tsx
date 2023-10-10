@@ -24,7 +24,7 @@ export default function OpenableDashboardComponent({children, className, wholeCl
     return (
         <div
             onClick={() => {if (!isOpened) {setOpened(true);}}}
-            className={`relative bg-theme rounded-[20px] group hover:border-white transition duration-500 border border-transparent overflow-hidden ${(wholeClassName !== null) ? wholeClassName : false} ${(!isOpened) ? 'cursor-pointer' : ''}`}
+            className={`relative bg-theme rounded-[20px] group hover:border-white transition duration-500 border border-transparent ${(wholeClassName !== null) ? wholeClassName : false} ${(!isOpened) ? 'cursor-pointer' : ''}`}
         >
             <div className={`absolute top-0 left-0 w-full h-full z-[20] ${(isOpened) ? 'pointer-events-none' : 'pointer-events-auto'}`}>
                 <div>
