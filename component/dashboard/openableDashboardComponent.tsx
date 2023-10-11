@@ -24,7 +24,7 @@ export default function OpenableDashboardComponent({children, className, wholeCl
     return (
         <div
             onClick={() => {if (!isOpened) {setOpened(true);}}}
-            className={`relative bg-theme rounded-[20px] group hover:border-white transition duration-500 border border-transparent ${(wholeClassName !== null) ? wholeClassName : false} ${(!isOpened) ? 'cursor-pointer' : ''}`}
+            className={`relative bg-theme rounded-[20px] group hover:border-white transition duration-500 border border-transparent ${(wholeClassName !== null) ? wholeClassName : false} ${(!isOpened) ? 'cursor-pointer overflow-hidden' : 'overflow-visible'}`}
         >
             <div className={`absolute top-0 left-0 w-full h-full z-[20] ${(isOpened) ? 'pointer-events-none' : 'pointer-events-auto'}`}>
                 <div>
@@ -54,6 +54,7 @@ export default function OpenableDashboardComponent({children, className, wholeCl
                     >
                         <ButtonComponent
                             onClick={() => false}
+                            tabIndex={(isOpened) ? -1 : 0}
                             className={'absolute top-[calc(50%-30px)] left-[50%] translate-x-[-50%] z-[50] border border-darker-theme'}
                             iconName={'lock'}
                             shadowColor={'shadow-darker-theme active:shadow-darker-theme'}
@@ -101,7 +102,7 @@ export default function OpenableDashboardComponent({children, className, wholeCl
                 transition={{duration: 1, delay: .5}}
                 initial={'hidden'}
                 animate={(isOpened) ? 'visible' : 'hidden'}
-                className={(className !== null) ? `${className} p-[20px]` : 'p-[20px]'}
+                className={(className !== null) ? `${className} p-[20px] ${(isOpened) ? 'visible' : 'hidden'}` : `p-[20px] ${(isOpened) ? 'visible' : 'hidden'}`}
             >
                 {children}
             </motion.div>

@@ -46,8 +46,8 @@ export default function DashboardMainMenuComponent():ReactNode {
                             setEmailFetching(false);
                         })
                 }} action="#">
-                    <input onChange={(event) => setEmailOfForm(event.target.value)} required className={'input mb-[15px]'} name="email" id={'email-input'} type="email" placeholder={'yours@gmail.com'}/>
-                    <textarea onChange={(event) => setTextOfForm(event.target.value)} required className={'input h-[100px] resize-none mb-[20px]'} name="massage" id="massage-input" placeholder={'You Massage'} />
+                    <input tabIndex={(isMailModalOpened) ? 0 : -1} onChange={(event) => setEmailOfForm(event.target.value)} required className={'input mb-[15px]'} name="email" id={'email-input'} type="email" placeholder={'yours@gmail.com'}/>
+                    <textarea tabIndex={(isMailModalOpened) ? 0 : -1} onChange={(event) => setTextOfForm(event.target.value)} required className={'input h-[100px] resize-none mb-[20px]'} name="massage" id="massage-input" placeholder={'You Massage'} />
                     {
                         (isFetchingErrored)
                             ? (
@@ -57,7 +57,7 @@ export default function DashboardMainMenuComponent():ReactNode {
                             ) : false
                     }
                     <div className={'rounded-[10px] px-[10px] py-[20px] bg-theme-orange-dark'}>
-                        <button className={'primary-btn overflow-hidden h-[50px] relative'}>
+                        <button tabIndex={(isMailModalOpened) ? 0 : -1} className={'primary-btn overflow-hidden h-[50px] relative'}>
                             <div data-fetching={isEmailFetching} className={'data-[fetching="false"]:translate-y-[-5px] duration-300 transition-all data-[fetching="true"]:translate-y-[-45px]'}>
                                 <span className={'flex justify-center items-center h-[40px]'}>SUBMIT</span>
                                 <span className={'text-sky-900 h-[40px] flex justify-center items-center'}><IconComponent size={30} name={'spinner'} /></span>

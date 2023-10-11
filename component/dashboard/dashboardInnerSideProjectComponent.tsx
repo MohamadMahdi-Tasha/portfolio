@@ -28,7 +28,7 @@ export default function DashboardInnerSideProjectComponent({isOpened, title, clo
             animate={(isOpened) ? 'visible' : 'hidden'}
             className={`absolute top-0 left-0 w-full h-full bg-black/60 z-[20] rounded-[20px] flex ${(isOpened) ? 'pointer-events-auto' : 'pointer-events-none'}`}
         >
-            <button onClick={closeFunction} className={'absolute top-[0] right-[20px] -translate-y-[50%] w-[50px] h-[50px] bg-red-600 text-red-900 flex justify-center items-center rounded-full transition duration-300 active:shadow-[0_inset_-0.5em_0] active:shadow-red-900'}>
+            <button tabIndex={(isOpened) ? 0 : -1} onClick={closeFunction} className={'absolute top-[0] right-[20px] -translate-y-[50%] w-[50px] h-[50px] bg-red-600 text-red-900 flex justify-center items-center rounded-full transition duration-300 active:shadow-[0_inset_-0.5em_0] active:shadow-red-900'}>
                 <IconComponent size={20} name={'x'} />
             </button>
             <div className={'h-full w-full flex justify-center items-center py-[50px] p-[20px]'}>
@@ -38,7 +38,7 @@ export default function DashboardInnerSideProjectComponent({isOpened, title, clo
                         <span className={'text-white text-[15px] font-bold uppercase tracking-wide truncate'}>{title}</span>
                     </div>
                     <p className={'text-white/80 mb-[20px] text-[16px] font-light'}>{children}</p>
-                    <a href={link} className={'block'}>
+                    <a tabIndex={(isOpened) ? 0 : -1} href={link} className={'block'}>
                         <button className={'primary-btn'} tabIndex={-1}>GO !</button>
                     </a>
                 </div>

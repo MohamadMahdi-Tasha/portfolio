@@ -31,7 +31,7 @@ export default function DashboardComponent({stateOfAnimate}:propsType):ReactNode
         >
             <div className={'grid lg:grid-cols-[1fr_1.5fr_1fr] sm:grid-cols-2 grid-cols-1 gap-[20px] mb-[20px]'}>
                 <DashboardMainMenuComponent />
-                <div className={'grid lg:grid-rows-[auto_2fr_1fr] grid-rows-1 gap-[20px] lg:grid-cols-2 grid-cols-1'}>
+                <div className={'grid lg:grid-rows-[.5fr_2fr_1fr] grid-rows-1 gap-[20px] lg:grid-cols-2 grid-cols-1'}>
                     <DashboardSocialMenuComponent />
                     <DashboardPorfolioMenuComponent />
                     <DashboardMComponent />
