@@ -26,10 +26,10 @@ export default function DashboardSideProjectComponent():ReactNode {
     // Returning JSX
     return (
         <OpenableDashboardComponent wholeClassName={'lg:col-span-1 sm:col-span-2 col-span-1'} className={'grid grid-rows-[.5fr_1fr_4fr] h-full relative'}>
-            <DashboardInnerSideProjectComponent title={'Coffee Catch Up'} icon={'i-will-be-good'} isOpened={coffeeCatchUpInnerOpened} closeFunction={() => setCoffeeCatchUpInnerOpened(false)} link={'https://coffe-catch-up.vercel.app/'}>
+            <DashboardInnerSideProjectComponent title={'Coffee Catch Up'} icon={'coffee-catch-up'} isOpened={coffeeCatchUpInnerOpened} closeFunction={() => setCoffeeCatchUpInnerOpened(false)} link={'https://coffe-catch-up.vercel.app/'}>
                 Coffee Catch Up is daily vlog of me about challenges, my routine, my projects and many more ...
             </DashboardInnerSideProjectComponent>
-            <DashboardInnerSideProjectComponent title={'I Will Be Good'} icon={'coffee-catch-up'} isOpened={medictaionInnerOpened} closeFunction={() => setmedictaionInnerOpened(false)} link={'https://i-will-be-good-web.vercel.app/'}>
+            <DashboardInnerSideProjectComponent title={'I Will Be Good'} icon={'i-will-be-good'} isOpened={medictaionInnerOpened} closeFunction={() => setmedictaionInnerOpened(false)} link={'https://i-will-be-good-web.vercel.app/'}>
                 I Will Be Good is web app which its purpose is to make you overcome DP/DR with tracking medications and meditations which you have done in today and before
             </DashboardInnerSideProjectComponent>
             <div className={'flex items-center gap-[30px] bg-darker-theme rounded-[10px] p-[20px] mb-[20px]'}>
@@ -37,8 +37,8 @@ export default function DashboardSideProjectComponent():ReactNode {
                 <span className={'block truncate text-white font-bold tracking-wide'}>SIDE-PROJECTS</span>
             </div>
             <div className={'grid grid-cols-2 gap-[20px] mb-[20px]'}>
-                <SideProjectComponent onClick={() => setCoffeeCatchUpInnerOpened(true)} icon={'i-will-be-good'} />
-                <SideProjectComponent onClick={() => setmedictaionInnerOpened(true)} icon={'coffee-catch-up'} />
+                <SideProjectComponent onClick={() => setmedicationInnerOpened(true)} icon={'i-will-be-good'} />
+                <SideProjectComponent onClick={() => setCoffeeCatchUpInnerOpened(true)} icon={'coffee-catch-up'} />
             </div>
             <div className={'bg-darker-theme rounded-[20px] overflow-hidden relative'}>
                 <div data-opened={(isScrew1Opened && isScrew2Opened && isScrew3Opened && isScrew4Opened)}
@@ -61,5 +61,3 @@ export default function DashboardSideProjectComponent():ReactNode {
         </OpenableDashboardComponent>
     );
 }
-
-
