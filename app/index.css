@@ -9,6 +9,7 @@
 .primary-btn {@apply bg-sky-500 text-sky-100 w-full p-[10px] text-center text-[15px] font-bold tracking-wide uppercase shadow-sky-900 shadow-[0_0.5em_0] rounded-[5px] -translate-y-[10px] transition-all duration-300 hover:translate-y-0 active:translate-y-0 hover:shadow-transparent active:shadow-sky-900 active:shadow-[0_inset_-0.5em_0]}
 .input {@apply bg-theme block w-full px-[20px] py-[15px] rounded-[10px] text-white text-[14px]  placeholder:text-white/60 font-normal outline-0;}
 .hiring-animation {animation: hiring-animation 3s infinite linear alternate-reverse;}
+.sideprojects-screw {@apply text-white/20 transition-all duration-500 data-[opened="true"]:translate-x-[10px] data-[opened="true"]:translate-y-[10px] data-[opened="true"]:rotate-90 data-[opened="true"]:opacity-0 data-[opened="true"]:pointer-events-none;}
 
 .small-lines-on-door {
     background: linear-gradient(45deg, #440083FF 7.5%, #240046 7.5%, #240046 42.5%, #440083FF 42.5%, #440083FF 57.5%, #240046 57.5%, #240046 92.5%, #440083FF 92.5%);

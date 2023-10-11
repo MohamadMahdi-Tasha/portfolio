@@ -10,12 +10,18 @@ import SideProjectComponent from "@/chunk/sideProjectComponent";
 import ScrewComponent from "@/chunk/screwComponent";
 import SoundImage from '@/public/img/dashboard/img-sound-dot.svg';
 import DashboardInnerSideProjectComponent from "@/component/dashboard/dashboardInnerSideProjectComponent";
+import {motion} from 'framer-motion';
 
 // Creating And Exporting Dashboard Side Project Component As Default
 export default function DashboardSideProjectComponent():ReactNode {
     // Defining States Of Component
     const [coffeeCatchUpInnerOpened, setCoffeeCatchUpInnerOpened] = useState(false);
     const [medictaionInnerOpened, setmedictaionInnerOpened] = useState(false);
+
+    const [isScrew1Opened, setScrew1Opened] = useState(false);
+    const [isScrew2Opened, setScrew2Opened] = useState(false);
+    const [isScrew3Opened, setScrew3Opened] = useState(false);
+    const [isScrew4Opened, setScrew4Opened] = useState(false);
 
     // Returning JSX
     return (
@@ -34,15 +40,22 @@ export default function DashboardSideProjectComponent():ReactNode {
                 <SideProjectComponent onClick={() => setmedictaionInnerOpened(true)} icon={'i-will-be-good'} />
                 <SideProjectComponent onClick={() => setCoffeeCatchUpInnerOpened(true)} icon={'coffee-catch-up'} />
             </div>
-            <div className={'bg-darker-theme p-[20px] rounded-[20px] flex flex-col gap-[20px] justify-between items-center w-full'}>
-                <div className={'flex justify-between items-center w-full'}>
-                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
-                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
+            <div className={'bg-darker-theme rounded-[20px] overflow-hidden relative'}>
+                <div data-opened={(isScrew1Opened && isScrew2Opened && isScrew3Opened && isScrew4Opened)}
+                     className={'absolute bg-darker-theme rounded-[20px] p-[20px] w-full h-full top-0 left-0 flex flex-col gap-[20px] justify-between items-center data-[opened="true"]:opacity-0 data-[opened="true"]:pointer-events-none data-[opened="true"]:translate-x-[10px] data-[opened="true"]:transform-y-[10px] data-[opened="true"]:pointer-events-none data-[opened="true"]:-rotate-45 transition-all duration-500'}
+                >
+                    <div className={'flex justify-between items-center w-full'}>
+                        <ScrewComponent dataOpened={`${isScrew1Opened}`} className={'sideprojects-screw'} tabIndex={(isScrew1Opened) ? -1 : 0} clickable={true} onClick={() => setScrew1Opened(true)} />
+                        <ScrewComponent dataOpened={`${isScrew2Opened}`} className={'sideprojects-screw'} tabIndex={(isScrew2Opened) ? -1 : 0} clickable={true} onClick={() => setScrew2Opened(true)} />
+                    </div>
+                    <img src={SoundImage.src} className={'mx-auto w-[60%] aspect-square'} alt="Sound Dots Image"/>
+                    <div className={'flex justify-between items-center w-full'}>
+                        <ScrewComponent dataOpened={`${isScrew3Opened}`} className={'sideprojects-screw'} tabIndex={(isScrew3Opened) ? -1 : 0} clickable={true} onClick={() => setScrew3Opened(true)} />
+                        <ScrewComponent dataOpened={`${isScrew4Opened}`} className={'sideprojects-screw'} tabIndex={(isScrew4Opened) ? -1 : 0} clickable={true} onClick={() => setScrew4Opened(true)} />
+                    </div>
                 </div>
-                <img src={SoundImage.src} className={'mx-auto w-[60%] aspect-square'} alt="Sound Dots Image"/>
-                <div className={'flex justify-between items-center w-full'}>
-                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
-                    <span className={'text-white/20'}><ScrewComponent clickable={true} onClick={() => alert('asd')} /></span>
+                <div className={'p-[20px] w-full h-full flex justify-center items-center'}>
+                    <h6 className={'text-center text-white font-bold text-[28px]'}>Thanks For Visiting :)</h6>
                 </div>
             </div>
         </OpenableDashboardComponent>
