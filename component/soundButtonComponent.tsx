@@ -14,7 +14,7 @@ export default function SoundButtonComponent():ReactNode {
 
     // Returning JSX
     return (
-        <button className={'fixed top-[20px] lg:right-[20px] right-[10px] w-[50px] h-[50px] z-[20] transition duration-500 bg-darker-theme hover:bg-theme overflow-hidden rounded-[10px]'}
+        <button className={'fixed top-[20px] lg:right-[20px] right-[10px] w-[50px] h-[50px] z-[80] transition duration-500 bg-darker-theme hover:bg-theme overflow-hidden rounded-[10px]'}
                 onClick={() => {
                     setMuted(prevState => !prevState);
                     document.body.setAttribute('data-muted', `${isMuted}`);

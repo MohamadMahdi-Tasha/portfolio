@@ -102,7 +102,7 @@ export default function OpenableDashboardComponent({children, className, wholeCl
                 transition={{duration: 1, delay: .5}}
                 initial={'hidden'}
                 animate={(isOpened) ? 'visible' : 'hidden'}
-                className={(className !== null) ? `${className} p-[20px] ${(isOpened) ? 'visible' : 'hidden'}` : `p-[20px] ${(isOpened) ? 'visible' : 'hidden'}`}
+                className={(className !== null) ? `${className} p-[20px] ${(isOpened) ? 'lg:visible' : 'lg:hidden'}` : `p-[20px] ${(isOpened) ? 'lg:visible' : 'lg:hidden'}`}
             >
                 {children}
             </motion.div>
