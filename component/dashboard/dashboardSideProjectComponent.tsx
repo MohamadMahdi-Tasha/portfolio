@@ -37,7 +37,7 @@ export default function DashboardSideProjectComponent():ReactNode {
                 <span className={'block truncate text-white font-bold tracking-wide'}>SIDE-PROJECTS</span>
             </div>
             <div className={'grid grid-cols-2 gap-[20px] mb-[20px]'}>
-                <SideProjectComponent onClick={() => setmedicationInnerOpened(true)} icon={'i-will-be-good'} />
+                <SideProjectComponent onClick={() => setmedictaionInnerOpened(true)} icon={'i-will-be-good'} />
                 <SideProjectComponent onClick={() => setCoffeeCatchUpInnerOpened(true)} icon={'coffee-catch-up'} />
             </div>
             <div className={'bg-darker-theme rounded-[20px] overflow-hidden relative'}>
